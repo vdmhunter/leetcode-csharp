@@ -1,4 +1,6 @@
-﻿namespace LeetCodeCSharpApp.AddTwoNumbers01;
+﻿using LeetCodeCSharpApp.Common;
+
+namespace LeetCodeCSharpApp.AddTwoNumbers01;
 
 public class Solution
 {
