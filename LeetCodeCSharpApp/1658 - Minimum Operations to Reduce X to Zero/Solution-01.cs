@@ -32,7 +32,9 @@ public class Solution
             {
                 //if current subarray/window sum matches the target
                 //we update the ans, and continue to search the largest window
-                if (ps == target) minStep = Math.Min(minStep, nums.Length - (r - l + 1));
+                if (ps == target)
+                    minStep = Math.Min(minStep, nums.Length - (r - l + 1));
+                
                 ps -= nums[l];
                 l++;
             }
