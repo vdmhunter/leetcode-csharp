@@ -35,9 +35,7 @@ public class Solution
                 _board[row] = col;
                 
                 if (IsValid(row))
-                {
                     Search(row + 1);
-                }
             }
         }
     }

@@ -16,9 +16,7 @@ public class NumMatrix
             _dp[0] = new int[matrix[0].Length + 1];
             
             for (var c = 0; c < matrix[0].Length; c++)
-            {
                 _dp[r][c + 1] = _dp[r][c] + matrix[r][c];
-            }
         }
     }
     
@@ -27,10 +25,8 @@ public class NumMatrix
         var sum = 0;
         
         for (var row = row1; row <= row2; row++)
-        {
             sum += _dp![row][col2 + 1] - _dp[row][col1];
-        }
-        
+
         return sum;
     }
 }
