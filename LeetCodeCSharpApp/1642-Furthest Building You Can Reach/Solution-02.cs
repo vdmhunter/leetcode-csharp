@@ -15,7 +15,7 @@ public class Solution
             diffs[i] = new[] { i, Math.Max(heights[i] - heights[i - 1], 0) };
 
         // largest diffs first
-        Array.Sort(diffs, new Comparer());
+        Array.Sort(diffs, (a, b) => b[1] - a[1]);
 
         int ans = 0, l = 1, r = n - 1;
         while (l <= r)
@@ -42,13 +42,5 @@ public class Solution
         }
 
         return ans;
-    }
-}
-
-internal class Comparer : IComparer<int[]>
-{
-    public int Compare(int[]? i1, int[]? i2)
-    {
-        return i2![1] - i1![1];
     }
 }
