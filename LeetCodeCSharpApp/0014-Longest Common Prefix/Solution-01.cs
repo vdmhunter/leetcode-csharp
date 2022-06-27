@@ -5,7 +5,6 @@ namespace LeetCodeCSharpApp.LongestCommonPrefix01;
 
 public class Solution
 {
-    
     public string LongestCommonPrefix(string[] strs)
     {
         var result = string.Empty;
