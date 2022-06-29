@@ -4,8 +4,13 @@ public class Solution
 {
     public int[][] ReconstructQueue(int[][] people)
     {
-        var result = new int[people.Length][];
+        Array.Sort(people, (a, b) => a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);
+        
+        var result = new List<int[]>();
+        
+        foreach (var p in people)
+            result.Insert(p[1], p);
 
-        return result;
+        return result.ToArray();
     }
 }
