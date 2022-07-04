@@ -7,9 +7,11 @@ public class Solution
 {
     public int Candy(int[] ratings)
     {
-        int n = ratings.Length, result = n;
+        var result = ratings.Length;
 
-        for (int i = 1, up = 0, down = 0, peak = 0; i < ratings.Length; i++)
+        int up = 0, down = 0, peak = 0;
+
+        for (var i = 1; i < ratings.Length; i++)
             if (ratings[i - 1] < ratings[i])
             {
                 //put candies vertically on i
