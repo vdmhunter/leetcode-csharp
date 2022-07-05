@@ -1,5 +1,6 @@
 // ReSharper disable InconsistentNaming
 // ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable FieldCanBeMadeReadOnly.Global
 
 #pragma warning disable CS8618
 
@@ -8,6 +9,7 @@ namespace LeetCodeCSharpApp.Common;
 public class Node
 {
     public int val;
+    
     public IList<Node> children;
     
     public Node()
