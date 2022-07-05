@@ -44,7 +44,7 @@ public class Solution
             // prefix is same for `products[i]` Whichever comes first.
             for (var i = start; i < Math.Min(start + 3, n); i++)
             {
-                if (products[i].Length < prefix.Length || !products[i].Substring(0, prefix.Length).Equals(prefix))
+                if (products[i].Length < prefix.Length || !products[i][..prefix.Length].Equals(prefix))
                     break;
                 
                 result[^1].Add(products[i]);
