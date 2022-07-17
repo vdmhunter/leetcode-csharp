@@ -4,7 +4,7 @@ namespace LeetCodeCSharpApp.AddTwoNumbers01;
 
 public class Solution
 {
-    public ListNode AddTwoNumbers(ListNode? l1, ListNode? l2)
+    public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
     {
         if (l1 == null && l2 == null)
             return null!;
