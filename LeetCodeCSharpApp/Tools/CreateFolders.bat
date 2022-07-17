@@ -1,5 +1,5 @@
 @echo off
-setlocal enabledelayedexpansion
+setLocal enableDelayedExpansion
 
 for /l %%n in (1,70,2500) do (
   set /a k=%%n+69
@@ -8,5 +8,3 @@ for /l %%n in (1,70,2500) do (
   rem echo !formattedN:~-4!-!formattedK:~-4! >> folders.txt
   mkdir "[!formattedN:~-4!-!formattedK:~-4!]"
 )
-
-
