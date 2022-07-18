@@ -23,6 +23,6 @@ public class Solution
             map[nums[i]] = i;
         }
 
-        return result;
+        return null!;
     }
 }
