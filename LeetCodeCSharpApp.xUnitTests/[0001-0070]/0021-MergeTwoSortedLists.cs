@@ -68,6 +68,7 @@ public class MergeTwoSortedListsTests
         Assert.Equal(_testcase001_output.next.val, output.next.val);
         Assert.Equal(_testcase001_output.next.next.val, output.next.next.val);
         Assert.Equal(_testcase001_output.next.next.next.val, output.next.next.next.val);
+        Assert.Equal(_testcase001_output.next.next.next.next.val, output.next.next.next.next.val);
         Assert.Equal(_testcase001_output.next.next.next.next.next.val, output.next.next.next.next.next.val);
     }
 
