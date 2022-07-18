@@ -12,7 +12,7 @@ public class NumberOfSubmatricesThatSumToTargetTests
 {
     private readonly Solution01.Solution _solution01;
 
-    private const string ProblemName = "0205-Number Of Submatrices That Sum To Target";
+    private const string ProblemName = "1074-Number Of Submatrices That Sum To Target";
 
     #region Test Case 001
 
