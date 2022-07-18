@@ -5,6 +5,8 @@ using System.Diagnostics.CodeAnalysis;
 using Xunit;
 using Solution01 = LeetCodeCSharpApp.FindPivotIndex01;
 
+namespace LeetCodeCSharpApp.xUnitTests;
+
 [ExcludeFromCodeCoverage]
 public class FindPivotIndexTexts
 {

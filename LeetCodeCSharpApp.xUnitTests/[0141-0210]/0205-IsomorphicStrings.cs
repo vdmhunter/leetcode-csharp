@@ -5,6 +5,8 @@ using System.Diagnostics.CodeAnalysis;
 using Xunit;
 using Solution01 = LeetCodeCSharpApp.IsomorphicStrings01;
 
+namespace LeetCodeCSharpApp.xUnitTests;
+
 [ExcludeFromCodeCoverage]
 public class IsomorphicStringsTests {
     
