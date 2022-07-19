@@ -1,5 +1,8 @@
 namespace LeetCodeCSharpApp.HappyNumber01;
 
+/// <summary>
+/// Floyd's Cycle-Finding Algorithm
+/// </summary>
 public class Solution
 {
     public bool IsHappy(int n)
