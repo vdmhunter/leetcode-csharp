@@ -14,7 +14,7 @@ public class TrieNode4
 
     public TrieNode4 Get(char c)
     {
-        if (_children[c - 'a'] != null)
+        if (_children[c - 'a'] != null!)
             return _children[c - 'a'];
 
         _children[c - 'a'] = new TrieNode4();
