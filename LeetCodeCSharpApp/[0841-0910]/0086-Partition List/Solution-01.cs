@@ -6,7 +6,7 @@ public class Solution
 {
     public ListNode Partition(ListNode head, int x)
     {
-        ListNode smallerHead = new(0), biggerHead = new(0);
+        ListNode smallerHead = new(), biggerHead = new();
         ListNode smaller = smallerHead, bigger = biggerHead;
         
         while (head != null)
