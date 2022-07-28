@@ -2,11 +2,6 @@ namespace LeetCodeCSharpApp.MaximumProductOfWordLengths01;
 
 public class Solution
 {
-    private uint WordToUInt(string word)
-    {
-        return word.ToCharArray().Aggregate(0u, (current, c) => current | (uint)(1 << (c - 97)));
-    }
-
     public int MaxProduct(string[] words)
     {
         var ints = new uint[words.Length];
@@ -22,5 +17,10 @@ public class Solution
                     max = words[i].Length * words[j].Length;
 
         return max;
+    }
+    
+    private uint WordToUInt(string word)
+    {
+        return word.ToCharArray().Aggregate(0u, (current, c) => current | (uint)(1 << (c - 97)));
     }
 }
