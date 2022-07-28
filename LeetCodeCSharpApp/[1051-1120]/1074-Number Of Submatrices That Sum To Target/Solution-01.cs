@@ -1,3 +1,5 @@
+// ReSharper disable IdentifierTypo
+
 namespace LeetCodeCSharpApp.NumberOfSubmatricesThatSumToTarget01;
 
 public class Solution
