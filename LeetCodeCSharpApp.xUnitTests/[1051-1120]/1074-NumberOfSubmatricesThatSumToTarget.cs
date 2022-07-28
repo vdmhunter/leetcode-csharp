@@ -1,3 +1,4 @@
+// ReSharper disable IdentifierTypo
 // ReSharper disable InconsistentNaming
 // ReSharper disable ConvertToConstant.Local
 
