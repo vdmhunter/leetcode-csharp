@@ -9,6 +9,7 @@ public class MyQueue
     {
         while (_s1.Count != 0)
             _s2.Push(_s1.Pop());
+        
         _s1.Push(x);
         
         while (_s2.Count != 0)
