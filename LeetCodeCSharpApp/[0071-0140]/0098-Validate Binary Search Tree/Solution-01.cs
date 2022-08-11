@@ -6,17 +6,20 @@ namespace LeetCodeCSharpApp.ValidateBinarySearchTree01;
 
 public class Solution
 {
+    private int? previousNode;
+
     public bool IsValidBST(TreeNode root)
     {
-        return Help(root, null, null);
-    }
+        while (true)
+        {
+            if (root == null!)
+                return true;
 
-    private bool Help(TreeNode p, int? low, int? high)
-    {
-        if (p == null)
-            return true;
+            if (!IsValidBST(root.left) || root.val <= previousNode)
+                return false;
 
-        return (low == null || p.val > low) && (high == null || p.val < high) &&
-               Help(p.left, low, p.val) && Help(p.right, p.val, high);
+            previousNode = root.val;
+            root = root.right;
+        }
     }
 }
