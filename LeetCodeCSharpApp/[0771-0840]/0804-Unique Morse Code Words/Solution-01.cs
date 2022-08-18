@@ -13,7 +13,6 @@ public class Solution
             { 'q', "--.-" }, { 'r', ".-."  }, { 's', "..."  }, { 't', "-"    },
             { 'u', "..-"  }, { 'v', "...-" }, { 'w', ".--"  }, { 'x', "-..-" },
             { 'y', "-.--" }, { 'z', "--.." }
-
         };
 
         var transformations = new HashSet<string>();
