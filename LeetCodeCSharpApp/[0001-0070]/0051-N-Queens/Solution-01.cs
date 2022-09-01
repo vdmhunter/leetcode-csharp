@@ -44,18 +44,39 @@ public class Solution
     
     private bool IsSafeToPlace(int row, int col)
     {
+        if (!IsSafeVertical(row, col))
+            return false;
+
+        if (!IsSafeDiagonal1(row, col))
+            return false;
+
+        if (!IsSafeDiagonal2(row, col))
+            return false;
+
+        return true;
+    }
+    
+    private bool IsSafeVertical(int row, int col)
+    {
         for (var c = col; c >= 0; c--)
             if (_board![row][c] == 1)
                 return false;
-
+        return true;
+    }
+    
+    private bool IsSafeDiagonal1(int row, int col)
+    {
         for (int r = row, c = col; r >= 0 && c >= 0; r--, c--)
             if (_board![r][c] == 1)
                 return false;
-
+        return true;
+    }
+    
+    private bool IsSafeDiagonal2(int row, int col)
+    {
         for (int r = row, c = col; r < _board!.Length && c >= 0; r++, c--)
             if (_board[r][c] == 1)
                 return false;
-
         return true;
     }
     
