@@ -9,7 +9,7 @@ public class Solution
 {
     public IList<double> AverageOfLevels(TreeNode root)
     {
-        var list = new List<double>();
+        var result = new List<double>();
         var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         
@@ -30,9 +30,9 @@ public class Solution
                     queue.Enqueue(cur.right);
             }
 
-            list.Add(sum / count);
+            result.Add(sum / count);
         }
 
-        return list;
+        return result;
     }
 }
