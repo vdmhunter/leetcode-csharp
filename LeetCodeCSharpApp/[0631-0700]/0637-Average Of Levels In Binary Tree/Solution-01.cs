@@ -16,7 +16,7 @@ public class Solution
         while (queue.Count != 0)
         {
             var count = queue.Count;
-            double sum = 0;
+            var sum = 0D;
             
             for (var i = 0; i < count; i++)
             {
