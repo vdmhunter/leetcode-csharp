@@ -27,12 +27,13 @@ public static class TreeNodeExtensions
         return array.ToBinaryTree();
     }
     
-    private static TreeNode ToBinaryTree(this int?[] nodes)
+    // ReSharper disable once MemberCanBePrivate.Global
+    public static TreeNode ToBinaryTree(this IReadOnlyList<int?> nodes)
     {
         return InsertLevelOrder(nodes, 0);
     }
 
-    public static int[] ToNlrArray(this TreeNode tree)
+    public static IEnumerable<int> ToNlrArray(this TreeNode tree)
     {
         var list = new List<int>();
         var rights = new Stack<TreeNode>();
@@ -55,6 +56,7 @@ public static class TreeNodeExtensions
 
     private static TreeNode InsertLevelOrder(IReadOnlyList<int?> array, int i)
     {
+        //TODO: Check version [1,5,3,null,4,10,6,9,2]
         TreeNode root = null!;
 
         if (i >= array.Count)
