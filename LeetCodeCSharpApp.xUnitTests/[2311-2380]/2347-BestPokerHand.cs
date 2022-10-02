@@ -18,7 +18,6 @@ public class BestPokerHandTests
 
     private readonly int[] _testcase001_ranks = { 13, 2, 3, 1, 9 };
     private readonly char[] _testcase001_suits = { 'a', 'a', 'a', 'a', 'a' };
-
     private readonly string _testcase001_output = "Flush";
 
     #endregion
@@ -27,7 +26,6 @@ public class BestPokerHandTests
 
     private readonly int[] _testcase002_ranks = { 4, 4, 2, 4, 4 };
     private readonly char[] _testcase002_suits = { 'd', 'a', 'a', 'b', 'c' };
-
     private readonly string _testcase002_output = "Three of a Kind";
 
     #endregion
@@ -36,7 +34,6 @@ public class BestPokerHandTests
 
     private readonly int[] _testcase003_ranks = { 10, 10, 2, 12, 9 };
     private readonly char[] _testcase003_suits = { 'a', 'b', 'c', 'a', 'd' };
-
     private readonly string _testcase003_output = "Pair";
 
     #endregion
@@ -45,7 +42,6 @@ public class BestPokerHandTests
 
     private readonly int[] _testcase004_ranks = { 1, 10, 2, 12, 9 };
     private readonly char[] _testcase004_suits = { 'a', 'b', 'c', 'a', 'd' };
-
     private readonly string _testcase004_output = "High Card";
 
     #endregion

@@ -25,7 +25,6 @@ public class LongestSubarrayWithMaximumBitwiseANDTests
     #region Test Case 002
 
     private readonly int[] _testcase002_nums = { 1, 2, 3, 4 };
-
     private readonly int _testcase002_output = 1;
 
     #endregion
@@ -34,7 +33,6 @@ public class LongestSubarrayWithMaximumBitwiseANDTests
 
     private readonly int[] _testcase003_nums =
         { 96317, 96317, 96317, 96317, 96317, 96317, 96317, 96317, 96317, 279979 };
-
     private readonly int _testcase003_output = 1;
 
     #endregion

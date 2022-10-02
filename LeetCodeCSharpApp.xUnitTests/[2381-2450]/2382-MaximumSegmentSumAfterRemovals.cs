@@ -18,7 +18,6 @@ public class MaximumSegmentSumAfterRemovalsTests
 
     private readonly int[] _testcase001_nums = { 1, 2, 5, 6, 1 };
     private readonly int[] _testcase001_removeQueries = { 0, 3, 2, 4, 1 };
-
     private readonly long[] _testcase001_output = { 14, 7, 2, 2, 0 };
 
     #endregion
@@ -27,7 +26,6 @@ public class MaximumSegmentSumAfterRemovalsTests
 
     private readonly int[] _testcase002_nums = { 3, 2, 11, 1 };
     private readonly int[] _testcase002_removeQueries = { 3, 2, 1, 0 };
-
     private readonly long[] _testcase002_output = { 16, 5, 3, 0 };
 
     #endregion

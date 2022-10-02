@@ -19,7 +19,6 @@ public class LongestIncreasingSubsequenceTests
     #region Test Case 001
 
     private readonly int[] _testcase001_nums = { 10, 9, 2, 5, 3, 7, 101, 18 };
-
     private readonly int _testcase001_output = 4;
 
     #endregion
@@ -27,7 +26,6 @@ public class LongestIncreasingSubsequenceTests
     #region Test Case 002
 
     private readonly int[] _testcase002_nums = { 0, 1, 0, 3, 2, 3 };
-
     private readonly int _testcase002_output = 4;
 
     #endregion
@@ -35,7 +33,6 @@ public class LongestIncreasingSubsequenceTests
     #region Test Case 003
 
     private readonly int[] _testcase003_nums = { 7, 7, 7, 7, 7, 7, 7 };
-
     private readonly int _testcase003_output = 1;
 
     #endregion
