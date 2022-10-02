@@ -12,7 +12,7 @@ public class LongestSubarrayWithMaximumBitwiseANDTests
 {
     private readonly Solution01.Solution _solution01;
 
-    private const string ProblemName = "-Longest Subarray With Maximum Bitwise AND";
+    private const string ProblemName = "2419-Longest Subarray With Maximum Bitwise AND";
 
     #region Test Case 001
 
