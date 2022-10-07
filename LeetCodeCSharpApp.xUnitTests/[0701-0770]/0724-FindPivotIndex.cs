@@ -1,6 +1,3 @@
-// ReSharper disable InconsistentNaming
-// ReSharper disable ConvertToConstant.Local
-
 using System.Diagnostics.CodeAnalysis;
 using Xunit;
 using Solution01 = LeetCodeCSharpApp.FindPivotIndex01;
@@ -8,7 +5,7 @@ using Solution01 = LeetCodeCSharpApp.FindPivotIndex01;
 namespace LeetCodeCSharpApp.xUnitTests;
 
 [ExcludeFromCodeCoverage]
-public class FindPivotIndexTexts
+public class FindPivotIndexTests
 {
     private readonly Solution01.Solution _solution01;
 
@@ -35,7 +32,7 @@ public class FindPivotIndexTexts
 
     #endregion
 
-    public FindPivotIndexTexts()
+    public FindPivotIndexTests()
     {
         _solution01 = new Solution01.Solution();
     }
