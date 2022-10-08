@@ -38,8 +38,27 @@ public class MyCalendarThree
 
     private void Split(int x)
     {
-        var prev = _starts.TakeWhile(kvp => kvp.Key <= x).Last().Key;
-        var next = _starts.Reverse().TakeWhile(kvp => kvp.Key >= x).Select(kvp => kvp.Key).Cast<int?>().LastOrDefault();
+        int prev;
+        int? next;
+        
+        var keyList = _starts.Keys.ToList();
+        var idx = keyList.BinarySearch(x);
+        
+        switch (idx)
+        {
+            case < 0 when ~idx == keyList.Count:
+                prev = keyList[^1];
+                next = null;
+                break;
+            case < 0 when ~idx < keyList.Count:
+                prev = keyList[~idx - 1];
+                next = keyList[~idx];
+                break;
+            default:
+                prev = keyList[idx];
+                next = keyList[idx];
+                break;
+        }
 
         if (next == x)
             return;
