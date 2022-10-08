@@ -16,7 +16,7 @@ public class AmountOfTimeForBinaryTreeToBeInfectedTests
     private readonly Solution01.Solution _solution01;
     private readonly Solution02.Solution _solution02;
 
-    private const string ProblemName = "0114-Amount Of Time For Binary Tree To Be Infected";
+    private const string ProblemName = "2385-Amount Of Time For Binary Tree To Be Infected";
 
     #region Test Case 001
 

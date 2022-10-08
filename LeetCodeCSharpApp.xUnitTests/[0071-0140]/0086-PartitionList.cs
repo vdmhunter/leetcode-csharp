@@ -13,7 +13,7 @@ public class PartitionListTests
 {
     private readonly Solution01.Solution _solution01;
 
-    private const string ProblemName = "0724-Partition List";
+    private const string ProblemName = "0086-Partition List";
 
     #region Test Case 001
 

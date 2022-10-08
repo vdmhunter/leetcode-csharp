@@ -1,6 +1,3 @@
-// ReSharper disable InconsistentNaming
-// ReSharper disable ConvertToConstant.Local
-
 using System.Diagnostics.CodeAnalysis;
 using Xunit;
 using Solution01 = LeetCodeCSharpApp.BestPokerHand01;
@@ -12,7 +9,7 @@ public class BestPokerHandTests
 {
     private readonly Solution01.Solution _solution01;
 
-    private const string ProblemName = "Best Poker Hand";
+    private const string ProblemName = "2347-Best Poker Hand";
 
     #region Test Case 001
 
