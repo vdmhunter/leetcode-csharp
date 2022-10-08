@@ -9,11 +9,11 @@ namespace LeetCodeCSharpApp.MyCalendarIII01;
 /// </summary>
 public class MyCalendarThree
 {
-    private readonly SortedDictionary<int, int> _diff;
+    private readonly SortedList<int, int> _diff;
 
     public MyCalendarThree()
     {
-        _diff = new SortedDictionary<int, int>();
+        _diff = new SortedList<int, int>();
     }
 
     public int Book(int start, int end)
