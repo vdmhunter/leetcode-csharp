@@ -1,6 +1,3 @@
-// ReSharper disable InconsistentNaming
-// ReSharper disable ConvertToConstant.Local
-
 using System.Diagnostics.CodeAnalysis;
 using Xunit;
 using Solution01 = LeetCodeCSharpApp.TwoSum01;
