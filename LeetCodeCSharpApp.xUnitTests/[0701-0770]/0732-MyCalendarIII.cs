@@ -3,7 +3,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Xunit;
-using Xunit.Sdk;
 using Solution01 = LeetCodeCSharpApp.MyCalendarIII01;
 using Solution02 = LeetCodeCSharpApp.MyCalendarIII02;
 using Solution03 = LeetCodeCSharpApp.MyCalendarIII03;
