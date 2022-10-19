@@ -14,7 +14,7 @@ public class Solution
         return s;
     }
 
-    private string CountIdx(string s)
+    private static string CountIdx(string s)
     {
         var sb = new StringBuilder();
         var c = s[0];
