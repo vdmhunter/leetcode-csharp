@@ -1,4 +1,4 @@
-namespace LeetCodeCsharpApp.OrderlyQueue01;
+namespace LeetCodeCSharpApp.OrderlyQueue01;
 
 public class Solution
 {
