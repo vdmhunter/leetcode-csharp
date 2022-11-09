@@ -8,16 +8,16 @@ namespace LeetCodeCSharpApp.OnlineStockSpan01;
 
 public class StockSpanner
 {
-    private readonly Stack<int[]> stack = new();
+    private readonly Stack<int[]> _stack = new();
 
     public int Next(int price)
     {
         var result = 1;
 
-        while (stack.Count != 0 && stack.Peek()[0] <= price)
-            result += stack.Pop()[1];
+        while (_stack.Count != 0 && _stack.Peek()[0] <= price)
+            result += _stack.Pop()[1];
 
-        stack.Push(new[] { price, result });
+        _stack.Push(new[] { price, result });
 
         return result;
     }
