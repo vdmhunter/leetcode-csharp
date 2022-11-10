@@ -69,6 +69,7 @@ public class Solution
         for (int r = row, c = col; r >= 0 && c >= 0; r--, c--)
             if (_board![r][c] == 1)
                 return false;
+        
         return true;
     }
     
@@ -77,6 +78,7 @@ public class Solution
         for (int r = row, c = col; r < _board!.Length && c >= 0; r++, c--)
             if (_board[r][c] == 1)
                 return false;
+        
         return true;
     }
     
