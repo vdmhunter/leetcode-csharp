@@ -17,6 +17,6 @@ public class Solution
 
     private static int Height(TreeNode root)
     {
-        return root == null! ? -1 : 1 + Height(root.left);
+        return root == null ? -1 : 1 + Height(root.left);
     }
 }
