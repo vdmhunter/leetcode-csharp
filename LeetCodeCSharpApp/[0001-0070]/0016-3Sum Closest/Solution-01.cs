@@ -4,9 +4,9 @@ public class Solution
 {
     public int ThreeSumClosest(int[] nums, int target)
     {
+        var result = nums[0] + nums[1] + nums[2];
         Array.Sort(nums);
         var n = nums.Length;
-        var result = nums[0] + nums[1] + nums[2];
         
         if(result > target)
             return result;
