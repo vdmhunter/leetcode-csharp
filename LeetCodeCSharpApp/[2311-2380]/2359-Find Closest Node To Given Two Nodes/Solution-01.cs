@@ -6,7 +6,7 @@ public class Solution
     {
         Dictionary<int, int> d1 = new(), d2 = new();
         int iterIndex = node1, distance = 0;
-        
+
         while (iterIndex != -1 && !d1.ContainsKey(iterIndex))
         {
             d1[iterIndex] = distance++;
@@ -16,15 +16,15 @@ public class Solution
         int resultIndex = int.MaxValue, resultDistance = int.MaxValue;
         iterIndex = node2;
         distance = 0;
-        
+
         while (iterIndex != -1 && !d2.ContainsKey(iterIndex))
         {
             d2[iterIndex] = distance++;
 
-            if (d1.ContainsKey(iterIndex))
+            if (d1.TryGetValue(iterIndex, out var idx))
             {
-                var m = Math.Max(d1[iterIndex], d2[iterIndex]);
-                
+                var m = Math.Max(d1[iterIndex], idx);
+
                 if (m < resultDistance || (m == resultDistance && iterIndex < resultIndex))
                 {
                     resultIndex = iterIndex;
@@ -37,7 +37,7 @@ public class Solution
 
         if (resultIndex == int.MaxValue)
             return -1;
-        
+
         return resultIndex;
     }
 }
