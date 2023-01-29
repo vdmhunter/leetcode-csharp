@@ -2,24 +2,24 @@ namespace LeetCodeCSharpApp.DataStreamAsDisjointIntervals01;
 
 public class SummaryRanges
 {
-    private SortedSet<int> values;
+    private readonly SortedSet<int> _values;
 
     public SummaryRanges()
     {
-        values = new SortedSet<int>();
+        _values = new SortedSet<int>();
     }
 
-    public void AddNum(int value) => values.Add(value);
+    public void AddNum(int value) => _values.Add(value);
 
     public int[][] GetIntervals()
     {
-        if (values.Count == 0)
+        if (_values.Count == 0)
             return Array.Empty<int[]>();
 
         var intervals = new List<int[]>();
         int left = -1, right = -1;
 
-        foreach (var value in values)
+        foreach (var value in _values)
         {
             if (left < 0)
                 left = right = value;
