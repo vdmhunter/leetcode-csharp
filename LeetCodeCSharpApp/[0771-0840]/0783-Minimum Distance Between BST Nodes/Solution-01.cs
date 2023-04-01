@@ -27,14 +27,3 @@ public class Solution
         MinDiffInBST(root.right, ref min, ref prev);
     }
 }
-
-public class Solution1
-{
-    public int MinimizeSum(int[] nums)
-    {
-        var n = nums.Length;
-        Array.Sort(nums);
-
-        return new[] { nums[n - 1] - nums[0], nums[n - 1] - nums[2], nums[n - 3] - nums[0], nums[n - 2] - nums[1] }.Min();
-    }
-}
