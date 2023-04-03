@@ -14,4 +14,3 @@ public class Solution
         return people.Length - 1 - j;
     }
 }
-
