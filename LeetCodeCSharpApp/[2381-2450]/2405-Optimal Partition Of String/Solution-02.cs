@@ -8,9 +8,9 @@ public class Solution
         var map = 0;
         const int mask = (1 << 26) - 1;
 
-        for (var i = 0; i < s.Length; i++)
+        foreach (var с in s)
         {
-            var bit = 1 << (s[i] - 'a');
+            var bit = 1 << (с - 'a');
 
             if ((map & bit) != 0)
             {
