@@ -7,9 +7,9 @@ namespace LeetCodeCSharpApp.Common;
 public class TrieNode3
 {
     public TrieNode3[] children;
-    
+
     public int weight;
-    
+
     public TrieNode3()
     {
         children = new TrieNode3[27];

@@ -7,9 +7,9 @@ namespace LeetCodeCSharpApp.Common;
 public class TrieNode2
 {
     public Dictionary<int, TrieNode2> children;
-    
+
     public int weight;
-    
+
     public TrieNode2()
     {
         children = new Dictionary<int, TrieNode2>();

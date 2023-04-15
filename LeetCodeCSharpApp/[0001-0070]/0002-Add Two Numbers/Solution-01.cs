@@ -17,7 +17,7 @@ public class Solution
 
         var nextNode = l1?.next ?? l2?.next;
 
-        if(flag && nextNode != null)
+        if (flag && nextNode != null)
             nextNode.val += 1;
 
         if (flag && nextNode == null)

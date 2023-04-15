@@ -10,12 +10,12 @@ public class Solution
         var eachRow = new string[numRows];
         var target = 0;
         var vec = 1;
-        
+
         foreach (var c in s)
         {
             eachRow[target] += c;
             target += vec;
-            
+
             if (target >= numRows)
             {
                 vec = -1;

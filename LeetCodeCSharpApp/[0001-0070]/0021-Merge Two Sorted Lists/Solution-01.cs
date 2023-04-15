@@ -15,7 +15,7 @@ public class Solution
         if (list1.val < list2.val)
         {
             list1.next = MergeTwoLists(list1.next, list2);
-            
+
             return list1;
         }
 

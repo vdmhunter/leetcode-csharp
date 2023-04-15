@@ -7,7 +7,7 @@ namespace LeetCodeCSharpApp.Common;
 public class TrieNode1
 {
     public TrieNode1[] children;
-    
+
     public HashSet<int> weight;
 
     public TrieNode1()

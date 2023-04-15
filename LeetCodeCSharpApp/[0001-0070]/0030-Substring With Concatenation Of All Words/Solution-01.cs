@@ -49,27 +49,28 @@ public class Solution
     {
         var wordsSeen = new Dictionary<string, int>();
 
-        //loop through the words array
+        // Loop through the words array
         for (var j = 0; j < _wordsCount; j++) //j is the number of words iterated in array
         {
             var validSubstring = UpdateWordsSeenAndGetValidSubstring(wordsSeen, s, i, j);
 
             if (validSubstring == string.Empty || wordsSeen[validSubstring] > _wordFrequency![validSubstring])
-                break; // break if there are more words seen than words available
+                break; // Break if there are more words seen than words available
 
-            if (j + 1 == _wordsCount) //if we have completed iteration of words array
-                _resultIndices!.Add(i); //valid substring added to resultIndices                
+            if (j + 1 == _wordsCount)   // If we have completed iteration of words array
+                _resultIndices!.Add(i); // valid substring added to resultIndices                
         }
     }
 
     private string UpdateWordsSeenAndGetValidSubstring(IDictionary<string, int> wordsSeen, string s, int i, int j)
     {
-        var nextWordIndex = i + j * _wordLength; //1 + 0 * 3 = 1
-        // get the next word from the string
+        var nextWordIndex = i + j * _wordLength; // 1 + 0 * 3 = 1
+
+        // Get the next word from the string
         var validSubstring = s.Substring(nextWordIndex, _wordLength); // nextWordIndex + wordLength is (END - 1) 
 
         if (!_wordFrequency!.ContainsKey(validSubstring))
-            return string.Empty; // break if we don't need this word
+            return string.Empty; // Break if we don't need this word
 
         if (!wordsSeen.ContainsKey(validSubstring))
             wordsSeen.Add(validSubstring, 0);

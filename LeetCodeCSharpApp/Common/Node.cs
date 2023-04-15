@@ -9,9 +9,9 @@ namespace LeetCodeCSharpApp.Common;
 public class Node
 {
     public int val;
-    
+
     public IList<Node> children;
-    
+
     public Node()
     {
     }

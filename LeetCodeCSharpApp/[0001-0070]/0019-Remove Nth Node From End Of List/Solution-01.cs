@@ -17,12 +17,12 @@ public class Solution
         var h = RemoveNthFromEnd(head.next, n);
 
         _m++;
-        
+
         if (_m == n)
             return h;
 
         head.next = h;
-        
+
         return head;
     }
 }

@@ -7,8 +7,8 @@ public class Solution
         var result = nums[0] + nums[1] + nums[2];
         Array.Sort(nums);
         var n = nums.Length;
-        
-        if(result > target)
+
+        if (result > target)
             return result;
 
         for (var i = 0; i < n - 2; i++)
@@ -26,7 +26,7 @@ public class Solution
                 MovePointers(ref low, ref high);
             }
         }
-        
+
         void MovePointers(ref int l, ref int h)
         {
             if (result < target)
