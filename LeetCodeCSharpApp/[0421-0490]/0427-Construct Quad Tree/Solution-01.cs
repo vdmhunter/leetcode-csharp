@@ -4,9 +4,12 @@ namespace LeetCodeCSharpApp.ConstructQuadTree01;
 
 public class Solution
 {
-    public Node Construct(int[][] grid) => GetNode(grid, grid.Length, 0, 0);
+    public Node Construct(int[][] grid)
+    {
+        return GetNode(grid, grid.Length, 0, 0);
+    }
 
-    private Node GetNode(int[][] grid, int size, int i, int k)
+    private static Node GetNode(int[][] grid, int size, int i, int k)
     {
         if (size == 1 || AreSame(grid, size, i, k))
             return new Node(grid[i][k] == 1, true);
