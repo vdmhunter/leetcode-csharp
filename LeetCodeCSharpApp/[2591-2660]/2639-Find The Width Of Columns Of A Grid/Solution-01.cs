@@ -7,10 +7,7 @@ public class Solution
         var result = new int[grid[0].Length];
 
         for (var i = 0; i < grid[0].Length; i++)
-        {
-            var max = grid.Select(e => e[i].ToString().Length).Prepend(0).Max();
-            result[i] = max;
-        }
+            result[i] = grid.Select(e => e[i].ToString().Length).Max();
 
         return result;
     }
