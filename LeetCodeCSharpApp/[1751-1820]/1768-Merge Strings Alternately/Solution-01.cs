@@ -7,17 +7,17 @@ public class Solution
     public string MergeAlternately(string word1, string word2)
     {
         int n = word1.Length, m = word2.Length, i = 0, j = 0;
-        var res = new StringBuilder();
-        
+        var result = new StringBuilder();
+
         while (i < n || j < m)
         {
             if (i < word1.Length)
-                res.Append(word1[i++]);
-            
+                result.Append(word1[i++]);
+
             if (j < word2.Length)
-                res.Append(word2[j++]);
+                result.Append(word2[j++]);
         }
 
-        return res.ToString();
+        return result.ToString();
     }
 }
