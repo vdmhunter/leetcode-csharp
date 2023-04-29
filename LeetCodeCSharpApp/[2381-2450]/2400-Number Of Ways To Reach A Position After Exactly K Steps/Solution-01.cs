@@ -11,11 +11,11 @@ public class Solution
         var dp = new int[2 * k + 1];
         dp[k - 1] = 1;
         dp[k + 1] = 1;
-        
+
         for (var i = 2; i <= k; i++)
         {
             var dpCopy = dp.ToArray();
-            
+
             for (var j = 0; j <= 2 * k; j++)
                 if (j == 0)
                     dpCopy[0] = dp[1];
@@ -23,7 +23,7 @@ public class Solution
                     dpCopy[2 * k] = dp[2 * k - 1];
                 else
                     dpCopy[j] = (dp[j - 1] + dp[j + 1]) % mode;
-            
+
             dp = dpCopy.ToArray();
         }
 

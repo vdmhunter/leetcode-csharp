@@ -16,13 +16,15 @@ public class Solution
         {
             var word = words[i];
             var cur = trie;
-            
+
             for (var j = word.Length - 1; j >= 0; --j)
                 cur = cur.Get(word[j]);
-            
+
             nodes.Add(cur, i);
         }
 
-        return nodes.Keys.Where(node => node.Count == 0).Sum(node => words[nodes[node]].Length + 1);
+        return nodes.Keys
+            .Where(node => node.Count == 0)
+            .Sum(node => words[nodes[node]].Length + 1);
     }
 }

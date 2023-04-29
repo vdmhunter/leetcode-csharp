@@ -11,7 +11,7 @@ public class Solution
         var prevNumCount = new long[k + 1];
         var currNumCount = new long[k + 1];
         prevNumCount[0] = 1;
-        
+
         for (var i = 1; i <= n; i++)
         {
             for (var j = 0; j <= k; j++)
@@ -23,7 +23,7 @@ public class Solution
 
                 currNumCount[j] = sum;
             }
-            
+
             (prevNumCount, currNumCount) = (currNumCount, prevNumCount);
         }
 

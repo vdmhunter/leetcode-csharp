@@ -21,7 +21,7 @@ public class Solution
 
         for (int i = 0, j = list.Length - 1; i < j;)
         {
-            if (!hs.Contains(list[i])) 
+            if (!hs.Contains(list[i]))
             {
                 i++;
                 continue;

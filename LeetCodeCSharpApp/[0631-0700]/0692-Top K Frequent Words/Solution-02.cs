@@ -8,7 +8,7 @@ public class Solution
     public IList<string> TopKFrequent(string[] words, int k)
     {
         var frequencyMap = new Dictionary<string, int>();
-        
+
         foreach (var word in words)
         {
             frequencyMap.TryGetValue(word, out var count);
@@ -18,12 +18,12 @@ public class Solution
         var sortedWords = new SortedSet<string>(frequencyMap.Keys, new WordAndFrequencyComparer(frequencyMap));
 
         var result = new List<string>();
-        
+
         foreach (var word in sortedWords)
         {
             if (result.Count == k)
                 break;
-            
+
             result.Add(word);
         }
 
@@ -42,7 +42,7 @@ public class Solution
         public int Compare(string? left, string? right)
         {
             var frequencyComparison = _frequencyMap[right!].CompareTo(_frequencyMap[left!]);
-            
+
             return frequencyComparison == 0
                 ? string.Compare(left, right, StringComparison.InvariantCulture)
                 : frequencyComparison;

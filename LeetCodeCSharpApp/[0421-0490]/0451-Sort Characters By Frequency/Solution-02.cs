@@ -10,20 +10,20 @@ public class Solution
 
         foreach (var c in s)
             counts[c]++;
-        
+
         var chars = new string[s.Length + 1];
 
         for (var i = 0; i < 256; i++)
         {
             if (counts[i] <= 0)
                 continue;
-            
+
             var cnt = counts[i];
 
             chars[cnt] ??= "";
             chars[cnt] += (char)i;
         }
-        
+
         var output = new StringBuilder();
 
         for (var i = chars.Length - 1; i >= 0; i--)
@@ -42,4 +42,3 @@ public class Solution
                 builder.Append(c);
     }
 }
-

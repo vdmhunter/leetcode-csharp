@@ -5,7 +5,7 @@ public class Solution
     public int NumberOfPaths(int[][] grid, int k)
     {
         const int mod = 1_000_000_007;
-        
+
         int m = grid.Length, n = grid[0].Length;
 
         var dp = new int[m, n, k];
@@ -23,7 +23,7 @@ public class Solution
 
             if (i > 0)
                 dp[i, j, moddedSum] += dp[i - 1, j, s];
-            
+
             dp[i, j, moddedSum] %= mod;
         }
 

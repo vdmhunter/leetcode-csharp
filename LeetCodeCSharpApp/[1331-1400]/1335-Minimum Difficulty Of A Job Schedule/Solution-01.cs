@@ -5,7 +5,7 @@ public class Solution
     public int MinDifficulty(int[] jobDifficulty, int d)
     {
         var dp = new int[d + 1, jobDifficulty.Length + 1];
-        
+
         for (var i = 0; i <= d; i++)
             for (var j = 0; j < jobDifficulty.Length; j++)
                 dp[i, j] = int.MaxValue;

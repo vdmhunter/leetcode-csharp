@@ -8,7 +8,7 @@ public class Solution
 
         // Create a list of tuples to store the rewards of each cheese type
         var rewards = new List<(int FirstReward, int SecondReward)>();
-        
+
         for (var i = 0; i < n; i++)
             rewards.Add((reward1[i], reward2[i]));
 
@@ -17,7 +17,7 @@ public class Solution
 
         var totalPoints = 0;
         var kCount = 0;
-        
+
         for (var i = 0; i < n; i++)
             if (n == 1 && k != 0)
             {

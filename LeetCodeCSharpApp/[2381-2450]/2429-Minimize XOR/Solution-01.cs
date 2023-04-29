@@ -5,7 +5,7 @@ public class Solution
     public int MinimizeXor(int num1, int num2)
     {
         int a = CountSetBits(num1), b = CountSetBits(num2), result = num1;
-        
+
         for (var i = 0; i < 32; ++i)
         {
             if (a > b && ((1 << i) & num1) > 0)

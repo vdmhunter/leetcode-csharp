@@ -29,7 +29,7 @@ public class MaximumSegmentSumAfterRemovalsTests
     private readonly long[] _testcase002_output = { 16, 5, 3, 0 };
 
     #endregion
-    
+
     public MaximumSegmentSumAfterRemovalsTests()
     {
         _solution01 = new Solution01.Solution();

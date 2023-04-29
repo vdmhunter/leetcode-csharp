@@ -9,11 +9,11 @@ public class Solution
         for (var i = 0; i < nums.Length; i++)
         {
             var lcm = 1;
-            
+
             for (var j = i; j < nums.Length && k % nums[j] == 0; j++)
             {
                 lcm = lcm * nums[j] / Gcd(lcm, nums[j]);
-                
+
                 if (lcm == k)
                     result++;
             }

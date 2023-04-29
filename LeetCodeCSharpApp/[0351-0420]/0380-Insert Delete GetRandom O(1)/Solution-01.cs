@@ -6,9 +6,9 @@ public class RandomizedSet
     private readonly Random _rnd = new();
 
     public bool Insert(int n) => _set.Add(n);
-    
+
     public bool Remove(int n) => _set.Remove(n);
-    
+
     public int GetRandom() => _set.ElementAt(_rnd.Next(_set.Count));
 }
 

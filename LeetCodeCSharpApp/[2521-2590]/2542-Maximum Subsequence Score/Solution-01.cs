@@ -9,7 +9,7 @@ public class Solution
 
         for (var i = 0; i < n; ++i)
             ess[i] = new[] { nums2[i], nums1[i] };
-        
+
         Array.Sort(ess, (a, b) => b[0] - a[0]);
 
         var pq = new PriorityQueue<int, int>(k);

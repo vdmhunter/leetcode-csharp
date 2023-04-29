@@ -9,7 +9,7 @@ public class Solution
     {
         var n = nums.Length;
         var dp = Enumerable.Repeat(1, n).ToList();
-        
+
         for (var i = 0; i < n; ++i)
             for (var j = 0; j < i; ++j)
                 if (nums[i] > nums[j] && dp[i] < dp[j] + 1)

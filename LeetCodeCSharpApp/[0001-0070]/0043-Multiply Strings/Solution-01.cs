@@ -22,11 +22,11 @@ public class Solution
             }
 
         var sb = new StringBuilder();
-        
+
         foreach (var p in pos)
             if (!(sb.Length == 0 && p == 0))
                 sb.Append(p);
-        
+
         return sb.Length == 0 ? "0" : sb.ToString();
     }
 }

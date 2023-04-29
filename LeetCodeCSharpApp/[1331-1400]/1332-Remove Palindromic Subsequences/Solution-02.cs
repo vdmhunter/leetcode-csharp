@@ -6,7 +6,7 @@ public class Solution
     {
         if (string.IsNullOrEmpty(s))
             return 0;
-        
+
         var r = new string(s.ToCharArray().Reverse().ToArray());
         return s == r ? 1 : 2;
     }

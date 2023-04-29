@@ -6,11 +6,11 @@ public class Solution
     {
         int m = grid.Length, n = grid[0].Length;
         var result = new int[n];
-        
+
         for (var i = 0; i < n; ++i)
         {
             var i1 = i;
-            
+
             for (var j = 0; j < m; ++j)
             {
                 var i2 = i1 + grid[j][i1];

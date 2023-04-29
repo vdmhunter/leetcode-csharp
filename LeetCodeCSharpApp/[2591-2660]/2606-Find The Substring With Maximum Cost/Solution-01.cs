@@ -8,7 +8,7 @@ public class Solution
     {
         var maxCost = int.MinValue;
         var currentSum = 0;
-        
+
         var arr = s.ToCharArray().Select(c =>
         {
             if (!chars.Contains(c))

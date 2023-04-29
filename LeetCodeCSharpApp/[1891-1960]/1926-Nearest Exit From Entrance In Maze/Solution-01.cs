@@ -13,7 +13,7 @@ public class Solution
         {
             var e = q.Dequeue();
             int i = e[0], j = e[1], steps = e[2];
-            
+
 
             if ((i != entrance[0] || j != entrance[1]) &&
                 (i == 0 || j == 0 || i == maze.Length - 1 || j == maze[i].Length - 1))

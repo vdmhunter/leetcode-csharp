@@ -15,13 +15,13 @@ public class MyCalendar
         {
             if (p.start <= start && p.end > start)
                 return false;
-            
+
             if (start <= p.start && end > p.start)
                 return false;
         }
 
         _list.Add((start, end));
-        
+
         return true;
     }
 }

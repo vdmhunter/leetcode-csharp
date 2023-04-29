@@ -46,7 +46,7 @@ public class Solution
             {
                 if (products[i].Length < prefix.Length || !products[i][..prefix.Length].Equals(prefix))
                     break;
-                
+
                 result[^1].Add(products[i]);
             }
 

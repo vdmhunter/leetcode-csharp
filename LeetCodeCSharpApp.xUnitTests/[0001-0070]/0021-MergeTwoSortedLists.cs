@@ -24,7 +24,7 @@ public class MergeTwoSortedListsTests
         new(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4))))));
 
     #endregion
-    
+
     #region Test Case 002
 
     private readonly ListNode _testcase002_list1 = null!;
@@ -33,7 +33,7 @@ public class MergeTwoSortedListsTests
     private readonly ListNode _testcase002_output = null!;
 
     #endregion
-    
+
     #region Test Case 003
 
     private readonly ListNode _testcase003_list1 = null!;
@@ -42,7 +42,7 @@ public class MergeTwoSortedListsTests
     private readonly ListNode _testcase003_output = new();
 
     #endregion
-    
+
     #region Test Case 004
 
     private readonly ListNode _testcase004_list1 = new();
@@ -79,7 +79,7 @@ public class MergeTwoSortedListsTests
         var output = _solution01.MergeTwoLists(_testcase002_list1, _testcase002_list2);
         Assert.Equal(_testcase002_output, output);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-01")]
     public void Solution01_TestCase003()
@@ -87,7 +87,7 @@ public class MergeTwoSortedListsTests
         var output = _solution01.MergeTwoLists(_testcase003_list1, _testcase003_list2);
         Assert.Equal(_testcase003_output.val, output.val);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-01")]
     public void Solution01_TestCase004()
@@ -96,14 +96,14 @@ public class MergeTwoSortedListsTests
 
         var expected = _testcase004_output;
         var actual = output;
-        
-        if(expected == null! && actual == null!)
+
+        if (expected == null! && actual == null!)
             Assert.Equal(expected, actual);
         else
             while (expected != null! && actual != null!)
             {
                 Assert.Equal(expected.val, actual.val);
-                
+
                 expected = expected.next;
                 actual = actual.next;
             }

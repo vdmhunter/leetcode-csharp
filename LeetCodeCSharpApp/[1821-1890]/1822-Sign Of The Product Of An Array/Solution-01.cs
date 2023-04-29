@@ -2,11 +2,11 @@ namespace LeetCodeCSharpApp.SignOfTheProductOfAnArray01;
 
 public class Solution
 {
-    public int ArraySign(int[] nums) 
+    public int ArraySign(int[] nums)
     {
         var count = 0;
-        
-        foreach(var n in nums)
+
+        foreach (var n in nums)
             switch (n)
             {
                 case 0:

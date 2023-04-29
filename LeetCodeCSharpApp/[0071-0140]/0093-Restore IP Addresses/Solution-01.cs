@@ -34,7 +34,7 @@ public class Solution
 
             var substring = s[..i];
 
-            if (int.Parse(substring) > 255 || (substring.StartsWith('0') && substring.Length != 1))
+            if (int.Parse(substring) > 255 || substring.StartsWith('0') && substring.Length != 1)
                 continue;
 
             tempList.Add(substring);

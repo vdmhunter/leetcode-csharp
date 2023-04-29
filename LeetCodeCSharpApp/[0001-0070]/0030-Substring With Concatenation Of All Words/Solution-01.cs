@@ -57,7 +57,7 @@ public class Solution
             if (validSubstring == string.Empty || wordsSeen[validSubstring] > _wordFrequency![validSubstring])
                 break; // Break if there are more words seen than words available
 
-            if (j + 1 == _wordsCount)   // If we have completed iteration of words array
+            if (j + 1 == _wordsCount) // If we have completed iteration of words array
                 _resultIndices!.Add(i); // valid substring added to resultIndices                
         }
     }

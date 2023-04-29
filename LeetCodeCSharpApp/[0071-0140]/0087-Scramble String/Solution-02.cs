@@ -19,13 +19,13 @@ public class Solution
 
         var dKey = s1 + "-" + s2;
 
-        if (_d.ContainsKey(dKey))
-            return _d[dKey];
+        if (_d.TryGetValue(dKey, out var check))
+            return check;
 
         var n = s1.Length;
         var f = new int[26];
         var s = new int[26];
-        
+
         for (var i = 0; i < n; i++)
         {
             f[s1[i] - 'a']++;
@@ -40,8 +40,8 @@ public class Solution
         }
 
         for (var i = 1; i < n; i++)
-            if ((Check(s1[..i], s2[..i]) && Check(s1[i..], s2[i..]))
-                || (Check(s1[..i], s2[(n - i)..]) && Check(s1[i..], s2[..(n - i)])))
+            if (Check(s1[..i], s2[..i]) && Check(s1[i..], s2[i..]) ||
+                Check(s1[..i], s2[(n - i)..]) && Check(s1[i..], s2[..(n - i)]))
             {
                 _d[dKey] = true;
 

@@ -15,7 +15,7 @@ public class Solution
         var result = new int[arr.Length + 2];
         result[0] = 0;
         result[arr.Length + 1] = count;
-        
+
         Array.Copy(arr, 0, result, 1, arr.Length);
         Array.Sort(result);
 

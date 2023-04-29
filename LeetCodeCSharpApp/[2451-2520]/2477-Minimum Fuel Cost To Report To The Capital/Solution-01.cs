@@ -30,7 +30,7 @@ public class Solution
 
         if (i != 0)
             _result += (people + _s - 1) / _s;
-        
+
         return people;
     }
 }

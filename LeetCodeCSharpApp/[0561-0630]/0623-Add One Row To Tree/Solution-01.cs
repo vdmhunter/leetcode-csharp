@@ -13,7 +13,7 @@ public class Solution
                 left = (depth == 1 ? root : null)!,
                 right = (depth == 0 ? root : null)!
             };
-            
+
             return newRoot;
         }
 

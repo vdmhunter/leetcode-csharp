@@ -6,7 +6,7 @@ public class Solution
     {
         var bannedSet = new HashSet<int>(banned);
         var count = 0;
-        
+
         for (var i = 1; i <= n && i <= maxSum; i++)
             if (!bannedSet.Contains(i))
             {

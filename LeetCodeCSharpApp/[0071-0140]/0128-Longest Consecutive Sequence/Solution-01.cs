@@ -11,15 +11,15 @@ public class Solution
         {
             if (hs.Contains(n - 1))
                 continue;
-            
+
             var m = n + 1;
-                
-            while(hs.Contains(m))
+
+            while (hs.Contains(m))
                 m++;
-                
+
             best = Math.Max(best, m - n);
         }
-        
+
         return best;
     }
 }

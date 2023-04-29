@@ -23,21 +23,21 @@ public class Solution
     private static void BfsFill(char[][] grid, int x, int y)
     {
         grid[x][y] = '0';
-        
+
         var n = grid.Length;
         var m = grid[0].Length;
         var queue = new Queue<int>();
         var code = x * m + y;
-        
+
         queue.Enqueue(code);
-        
+
         while (queue.Count != 0)
         {
             code = queue.Dequeue();
-            
+
             var i = code / m;
             var j = code % m;
-            
+
             if (i > 0 && grid[i - 1][j] == '1') //search upward and mark adjacent '1's as '0'.
             {
                 queue.Enqueue((i - 1) * m + j);

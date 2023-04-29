@@ -18,7 +18,7 @@ public class Solution
 
         if (carry == 1)
             stack.Push((char)(carry + '0'));
-        
+
         return new string(stack.ToArray());
     }
 }

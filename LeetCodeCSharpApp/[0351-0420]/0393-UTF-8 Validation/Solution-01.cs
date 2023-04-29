@@ -9,12 +9,12 @@ public class Solution
         foreach (var b in data)
         {
             var ones = 0;
-            
+
             for (var j = 7; j >= 0; j--)
             {
-                if ((b & (1 << j)) == 0)
+                if ((b & 1 << j) == 0)
                     break;
-                
+
                 ones++;
             }
 
@@ -27,7 +27,7 @@ public class Solution
             {
                 if (ones is 1 or > 4)
                     return false;
-                
+
                 remainingBytes = ones;
             }
 

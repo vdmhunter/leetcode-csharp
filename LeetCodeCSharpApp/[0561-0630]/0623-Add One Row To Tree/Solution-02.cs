@@ -11,17 +11,17 @@ public class Solution
 
         var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
-        
+
         if (depth == 1)
             return new TreeNode(val) { left = root };
 
         var level = 0;
-        
+
         while (queue.Count > 0)
         {
             var n = queue.Count;
             level += 1;
-            
+
             for (var i = 0; i < n; i++)
             {
                 if (level > depth)
@@ -54,7 +54,7 @@ public class Solution
             if (node != null!)
                 queue.Enqueue(node);
         }
-        
+
         return root;
     }
 }

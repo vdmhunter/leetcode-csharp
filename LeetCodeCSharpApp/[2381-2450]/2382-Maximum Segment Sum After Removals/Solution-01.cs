@@ -11,10 +11,10 @@ public class Solution
         foreach (var q in removeQueries[1..].Reverse())
         {
             mp.Add(q, (nums[q], 1));
-            
+
             (long rv, int rLen) = mp.TryGetValue(q + 1, out var value) ? value : (0, 0);
             (long lv, int lLen) = mp.TryGetValue(q - 1, out value) ? value : (0, 0);
-            
+
             var total = nums[q] + rv + lv;
             mp[q + rLen] = (total, lLen + rLen + 1);
             mp[q - lLen] = (total, lLen + rLen + 1);

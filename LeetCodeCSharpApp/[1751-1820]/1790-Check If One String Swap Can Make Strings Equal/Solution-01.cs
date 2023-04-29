@@ -8,7 +8,7 @@ public class Solution
             return false;
 
         int f = -1, s = -1;
-        
+
         for (var i = 0; i < s1.Length; i++)
             if (s1[i] != s2[i])
             {
@@ -22,7 +22,7 @@ public class Solution
 
         if (f == -1 && s == -1)
             return true; // equal strings
-        
+
         if ((f == -1) ^ (s == -1))
             return false; // only 1 mismatch
 

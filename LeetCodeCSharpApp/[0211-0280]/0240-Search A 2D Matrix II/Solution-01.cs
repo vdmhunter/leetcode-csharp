@@ -6,10 +6,10 @@ public class Solution
     {
         if (matrix == null! || matrix.Length < 1 || matrix[0].Length < 1)
             return false;
-        
+
         var col = matrix[0].Length - 1;
         var row = 0;
-        
+
         while (col >= 0 && row <= matrix.Length - 1)
         {
             if (target == matrix[row][col])

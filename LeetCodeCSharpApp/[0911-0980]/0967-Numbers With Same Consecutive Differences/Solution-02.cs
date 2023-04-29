@@ -12,7 +12,7 @@ public class Solution
             return new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
         var list = new List<int>();
-        
+
         for (var i = 1; i <= 9; i++)
             Dfs(list, n - 1, k, i);
 
@@ -24,12 +24,12 @@ public class Solution
         if (n <= 0)
         {
             list.Add(num);
-            
+
             return;
         }
 
         var lastDigit = num % 10;
-        
+
         if (lastDigit + k <= 9)
             Dfs(list, n - 1, k, num * 10 + lastDigit + k);
 

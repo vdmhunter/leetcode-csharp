@@ -9,7 +9,7 @@ public class Solution
         while (true)
         {
             nums = nums.Where(i => i > 0).ToArray();
-            
+
             if (nums.Length == 0)
                 break;
 

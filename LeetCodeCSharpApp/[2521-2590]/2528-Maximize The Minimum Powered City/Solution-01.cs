@@ -50,7 +50,7 @@ public class Solution
         {
             if (windowPower >= requiredPower)
                 return true;
-            
+
             var needed = requiredPower - windowPower;
 
             if (needed > k)

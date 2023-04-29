@@ -14,7 +14,7 @@ public class Solution
         var m = new Dictionary<char, int>();
         var n = w.Length;
         var result = new int[n];
-        
+
         for (var i = 0; i < n; i++)
         {
             m.TryAdd(w[i], m.Count);

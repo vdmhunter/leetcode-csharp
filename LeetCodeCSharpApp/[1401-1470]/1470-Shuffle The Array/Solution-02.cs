@@ -11,7 +11,7 @@ public class Solution
             nums[i] = nums[i] * 1024 + nums[i - n];
 
         var index = 0;
-        
+
         // to retrieve values from the pair of numbers and placing those retrieved value at their desired position
         for (var i = n; i < len; i++, index += 2)
         {

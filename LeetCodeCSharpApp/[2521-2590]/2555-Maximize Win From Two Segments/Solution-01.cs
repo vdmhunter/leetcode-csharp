@@ -11,7 +11,7 @@ public class Solution
         {
             while (prizePositions[j] < prizePositions[i] - k)
                 ++j;
-            
+
             dp[i + 1] = Math.Max(dp[i], i - j + 1);
             result = Math.Max(result, i - j + 1 + dp[j]);
         }

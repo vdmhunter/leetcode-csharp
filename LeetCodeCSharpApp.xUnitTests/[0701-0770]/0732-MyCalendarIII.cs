@@ -24,6 +24,7 @@ public class MyCalendarIIITests
     {
         new[] { 10, 20 }, new[] { 50, 60 }, new[] { 10, 40 }, new[] { 5, 15 }, new[] { 5, 10 }, new[] { 25, 55 }
     };
+
     private readonly int[] _testcase001_output = { 1, 1, 2, 3, 3, 3 };
 
     #endregion
@@ -35,6 +36,7 @@ public class MyCalendarIIITests
         new[] { 24, 40 }, new[] { 43, 50 }, new[] { 27, 43 }, new[] { 5, 21 }, new[] { 30, 40 }, new[] { 14, 29 },
         new[] { 3, 19 }, new[] { 3, 14 }, new[] { 25, 39 }, new[] { 6, 19 }
     };
+
     private readonly int[] _testcase005_output = { 1, 1, 2, 2, 3, 3, 3, 3, 4, 4 };
 
     #endregion
@@ -55,7 +57,7 @@ public class MyCalendarIIITests
         var output = _testcase001_input.Select(i => _solution01.Book(i[0], i[1]));
         Assert.Equal(_testcase001_output, output);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-01")]
     public void Solution01_TestCase005()
@@ -75,7 +77,7 @@ public class MyCalendarIIITests
         var output = _testcase001_input.Select(i => _solution02.Book(i[0], i[1]));
         Assert.Equal(_testcase001_output, output);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-02")]
     public void Solution02_TestCase005()
@@ -95,7 +97,7 @@ public class MyCalendarIIITests
         var output = _testcase001_input.Select(i => _solution03.Book(i[0], i[1])).ToArray();
         Assert.Equal(_testcase001_output, output);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-03")]
     public void Solution03_TestCase005()

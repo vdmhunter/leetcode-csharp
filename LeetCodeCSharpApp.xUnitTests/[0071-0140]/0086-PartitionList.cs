@@ -19,13 +19,14 @@ public class PartitionListTests
 
     private readonly ListNode _testcase001_head =
         new(1, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(5, new ListNode(2))))));
+
     private readonly int _testcase001_x = 3;
 
     private readonly ListNode _testcase001_output =
         new(1, new ListNode(2, new ListNode(2, new ListNode(4, new ListNode(3, new ListNode(5))))));
 
     #endregion
-    
+
     #region Test Case 002
 
     private readonly ListNode _testcase002_head = new(2, new ListNode(1));
@@ -54,7 +55,7 @@ public class PartitionListTests
         Assert.Equal(_testcase001_output.next.next.next.next.val, output.next.next.next.next.val);
         Assert.Equal(_testcase001_output.next.next.next.next.next.val, output.next.next.next.next.next.val);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-01")]
     public void Solution01_TestCase002()

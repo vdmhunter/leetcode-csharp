@@ -10,7 +10,7 @@ public class Solution
     private static int HoursCount(string hh)
     {
         var result = 1;
-        
+
         if (hh == "??")
             result = 24;
         else if (hh[0] == '?' && hh[1] != '?')
@@ -25,18 +25,18 @@ public class Solution
 
         return result;
     }
-    
+
     private static int MinutesCount(string mm)
     {
         var result = 1;
-        
+
         if (mm == "??")
             result = 60;
         else if (mm[0] == '?' && mm[1] != '?')
-            result =  6;
+            result = 6;
         else if (mm[0] != '?' && mm[1] == '?')
             result = 10;
-        
+
         return result;
     }
 }

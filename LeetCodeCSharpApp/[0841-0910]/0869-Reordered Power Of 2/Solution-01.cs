@@ -13,13 +13,13 @@ public class Solution
         return false;
     }
 
-    private long Counter(int n)
+    private static long Counter(int n)
     {
-        long res = 0;
-        
+        var result = 0L;
+
         for (; n > 0; n /= 10)
-            res += (int)Math.Pow(10, n % 10);
-        
-        return res;
+            result += (int)Math.Pow(10, n % 10);
+
+        return result;
     }
 }

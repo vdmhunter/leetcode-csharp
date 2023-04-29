@@ -82,7 +82,7 @@ public class NumArray
     {
         if (queryL <= l && r <= queryR)
             return _segmentTree[pos];
-        
+
         if (queryL > r || queryR < l)
             return 0;
 

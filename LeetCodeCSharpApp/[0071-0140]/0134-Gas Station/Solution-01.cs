@@ -14,14 +14,14 @@ public class Solution
 
             if (sum <= maxSum)
                 continue;
-            
+
             maxIndex = i;
             maxSum = sum;
         }
 
         if (sum < 0)
             return -1;
-        
+
         return maxIndex;
     }
 }

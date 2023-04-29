@@ -8,7 +8,7 @@ public class Solution
     {
         Dfs(grid, 0, 0);
         var second = Dfs(grid, 0, 0);
-        
+
         return second < 1;
     }
 
@@ -16,7 +16,7 @@ public class Solution
     {
         if (r < 0 || r >= g.Length || c < 0 || c >= g[0].Length || g[r][c] == 0)
             return 0;
-        
+
         if (r == g.Length - 1 && c == g[0].Length - 1)
             return 1;
 

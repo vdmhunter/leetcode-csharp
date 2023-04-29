@@ -6,7 +6,7 @@ public class Solution
     {
         var result = 1;
         var s = new HashSet<int>();
-        
+
         foreach (var r in rolls)
         {
             s.Add(r);
@@ -15,7 +15,7 @@ public class Solution
                 continue;
 
             result++;
-            
+
             s.Clear();
         }
 

@@ -14,7 +14,7 @@ public class Solution
 
         if (root.left != null || root.right != null)
             return root;
-        
+
         if (root.val == 0)
             root = null!;
 

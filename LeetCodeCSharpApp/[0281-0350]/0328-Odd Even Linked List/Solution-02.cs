@@ -11,12 +11,12 @@ public class Solution
 
         var headEven = OddEvenList(head, head.next);
         var headOdd = head;
-        
+
         while (head.next != null!)
             head = head.next;
-        
+
         head.next = headEven;
-        
+
         return headOdd;
     }
 
@@ -24,9 +24,9 @@ public class Solution
     {
         if (nextNode == null!)
             return nextNode!;
-        
+
         node.next = OddEvenList(nextNode, nextNode.next);
-        
+
         return nextNode;
     }
 }

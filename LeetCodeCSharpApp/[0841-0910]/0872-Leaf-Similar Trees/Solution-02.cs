@@ -26,10 +26,10 @@ public class Solution
         }
         else
         {
-            if (n.left != null) 
+            if (n.left != null)
                 Helper(n.left);
 
-            if (n.right != null) 
+            if (n.right != null)
                 Helper(n.right);
         }
     }

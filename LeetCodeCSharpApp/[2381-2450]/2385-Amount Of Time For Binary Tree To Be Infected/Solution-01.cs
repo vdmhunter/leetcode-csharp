@@ -30,7 +30,7 @@ public class Solution
 
                 if (!_adjacencyDictionary.ContainsKey(node))
                     continue;
-                
+
                 foreach (var i in _adjacencyDictionary[node].Where(item => !seen.Contains(item)))
                 {
                     q.Enqueue(i);
@@ -47,7 +47,7 @@ public class Solution
     {
         var q = new Queue<(TreeNode, int)>();
         q.Enqueue((root, -1));
-        
+
         while (q.Count != 0)
         {
             var (node, parent) = q.Dequeue();
@@ -60,7 +60,7 @@ public class Solution
 
             if (node.left != null)
                 q.Enqueue((node.left, node.val));
-            
+
             if (node.right != null)
                 q.Enqueue((node.right, node.val));
         }

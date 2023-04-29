@@ -26,9 +26,7 @@ public class Solution
                 stack.Push(result);
             }
             else
-            {
                 stack.Push(int.Parse(token));
-            }
 
         return stack.Pop();
     }

@@ -6,13 +6,13 @@ public class Solution
     {
         var records = new int[n][];
         long result = 0;
-        
+
         for (var i = 0; i < n; i++) records[i] = new int[2];
-            for (var i = 0; i < n; i++)
-            {
-                records[i][0] = efficiency[i];
-                records[i][1] = speed[i];
-            }
+        for (var i = 0; i < n; i++)
+        {
+            records[i][0] = efficiency[i];
+            records[i][1] = speed[i];
+        }
 
         Array.Sort(records, (a, b) => b[0] - a[0]);
 

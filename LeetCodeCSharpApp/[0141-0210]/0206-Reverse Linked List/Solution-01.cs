@@ -8,7 +8,7 @@ public class Solution
     {
         var current = head;
         ListNode prev = null!;
-        
+
         while (current != null)
         {
             var next = current.next;

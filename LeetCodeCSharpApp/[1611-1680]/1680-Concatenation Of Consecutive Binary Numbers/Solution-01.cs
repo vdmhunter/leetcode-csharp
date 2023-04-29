@@ -18,7 +18,7 @@ public class Solution
 
             result = (result * m + i) % mod;
         }
-        
+
         return (int)result;
     }
 }

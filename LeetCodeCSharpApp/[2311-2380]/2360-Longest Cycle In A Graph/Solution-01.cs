@@ -24,11 +24,11 @@ public class Solution
             if (position == -1)
                 return 0;
 
-            if (gd.ContainsKey(position))
-                return gd[position];
+            if (gd.TryGetValue(position, out var solve))
+                return solve;
 
-            if (d.ContainsKey(position))
-                return depth - d[position];
+            if (d.TryGetValue(position, out var value))
+                return depth - value;
 
             d[position] = depth;
 

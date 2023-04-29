@@ -3,7 +3,7 @@ namespace LeetCodeCSharpApp.SortThePeople01;
 public class Solution
 {
     private readonly List<(string Name, int Height)> _people = new();
-    
+
     public string[] SortPeople(string[] names, int[] heights)
     {
         for (var i = 0; i < names.Length; i++)

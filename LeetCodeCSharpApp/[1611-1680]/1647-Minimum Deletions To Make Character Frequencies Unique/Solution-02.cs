@@ -29,7 +29,7 @@ public class Solution
                 // Decrement the popped value and push it back into the queue
                 if (topElement - 1 > 0)
                     pq.Enqueue(topElement - 1, -(topElement - 1));
-                
+
                 deleteCount++;
             }
         }

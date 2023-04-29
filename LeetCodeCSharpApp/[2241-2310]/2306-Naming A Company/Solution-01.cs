@@ -21,7 +21,7 @@ public class Solution
         foreach (var idea1 in dict.Keys)
         {
             set.Add(idea1, new Dictionary<char, long>());
-            
+
             foreach (var idea2 in dict.Keys.Where(idea2 => idea1 != idea2))
             {
                 set[idea1].Add(idea2, 0);

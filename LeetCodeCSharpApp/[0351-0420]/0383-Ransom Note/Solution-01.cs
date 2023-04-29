@@ -12,4 +12,3 @@ public class Solution
         return ransomNote.All(letter => freq[letter - 'a']-- > 0);
     }
 }
-    

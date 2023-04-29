@@ -16,9 +16,10 @@ public class Solution
                 dic[sum].Add(n);
         }
 
-        var pairsLists = dic.Values.Where(v => v.Count >= 2).ToList();
-
-        return pairsLists.Select(pairsList => pairsList.OrderByDescending(pl => pl).Take(2).Sum())
-            .Prepend(-1).Max();
+        return dic.Values
+            .Where(v => v.Count >= 2)
+            .Select(pairsList => pairsList.OrderByDescending(pl => pl).Take(2).Sum())
+            .Prepend(-1)
+            .Max();
     }
 }

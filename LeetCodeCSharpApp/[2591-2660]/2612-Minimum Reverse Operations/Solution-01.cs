@@ -5,7 +5,7 @@ public class Solution
     public int[] MinReverseOperations(int n, int p, int[] banned, int k)
     {
         var bs = new HashSet<int>(banned) { p };
-        
+
         SortedSet<int>[] choice =
         {
             new(Enumerable.Range(0, n).Where(i => i % 2 == 0).Except(bs)),
@@ -18,7 +18,7 @@ public class Solution
             var r = Math.Min(pos + 1, n - k + 1) * 2 + k - 1 - pos;
             var currChoice = choice[l % 2];
             var result = currChoice.GetViewBetween(l, r - 1).ToList();
-            
+
             foreach (var i in result)
                 currChoice.Remove(i);
 
@@ -40,7 +40,7 @@ public class Solution
         }
 
         var result = Enumerable.Repeat(-1, n).ToArray();
-        
+
         foreach (var pair in visited)
             result[pair.Key] = pair.Value;
 

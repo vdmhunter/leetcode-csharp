@@ -30,7 +30,7 @@ public class WordFilter
                 for (var j = i; j < l; ++j)
                 {
                     var code1 = (chars[j] - '`') * 27;
-                    if(!tmp.children.ContainsKey(code1))
+                    if (!tmp.children.ContainsKey(code1))
                         tmp.children[code1] = new TrieNode2();
                     tmp = tmp.children[code1];
                     tmp.weight = wt;
@@ -41,14 +41,14 @@ public class WordFilter
                 for (var k = l - 1 - i; k >= 0; --k)
                 {
                     var code2 = chars[k] - '`';
-                    if(!tmp.children.ContainsKey(code2))
+                    if (!tmp.children.ContainsKey(code2))
                         tmp.children[code2] = new TrieNode2();
                     tmp = tmp.children[code2];
                     tmp.weight = wt;
                 }
 
                 var code = (chars[i] - '`') * 27 + (chars[l - 1 - i] - '`');
-                if(!cur.children.ContainsKey(code))
+                if (!cur.children.ContainsKey(code))
                     cur.children[code] = new TrieNode2();
                 cur = cur.children[code];
                 cur.weight = wt;
@@ -62,7 +62,7 @@ public class WordFilter
     {
         var cur = _trie;
         int i = 0, j = suffix.Length - 1;
-        
+
         while (i < prefix.Length || j >= 0)
         {
             var c1 = i < prefix.Length ? prefix[i] : '`';

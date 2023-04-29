@@ -30,7 +30,7 @@ public class Solution
             taken = 1 + Schedule(courses, i + 1, time + courses[i][0], memo);
 
         var notTaken = Schedule(courses, i + 1, time, memo);
-        
+
         memo[i][time] = Math.Max(taken, notTaken);
 
         return memo[i][time];

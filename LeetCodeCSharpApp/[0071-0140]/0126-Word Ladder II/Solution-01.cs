@@ -6,24 +6,24 @@ public class Solution
     {
         var result = new List<IList<string>>();
         var (shortestPathLength, graph) = ComputeGraph(beginWord, endWord, wordList);
-        
+
         if (graph == null)
             return result;
 
         var path = new string[shortestPathLength];
-        
+
         FindPaths(endWord, 0);
-        
+
         return result;
 
         void FindPaths(string w, int position)
         {
             path[shortestPathLength - (position + 1)] = w;
-            
+
             if (position == shortestPathLength - 1)
                 result.Add(path.ToList());
-            else if (graph.ContainsKey(w))
-                foreach (var nextWord in graph[w])
+            else if (graph.TryGetValue(w, out var value))
+                foreach (var nextWord in value)
                     FindPaths(nextWord, position + 1);
         }
     }
@@ -40,7 +40,7 @@ public class Solution
         var usedInIteration = new HashSet<string>(wordList.Count + 1);
         var endIsReached = false;
         var pathLength = 1;
-        
+
         while (q.Count > 0)
         {
             var iterationCount = q.Count;
@@ -58,7 +58,7 @@ public class Solution
 
             foreach (var usedContinuation in usedInIteration)
                 used.Add(usedContinuation);
-            
+
             usedInIteration.Clear();
             pathLength++;
         }
@@ -68,7 +68,7 @@ public class Solution
         bool EndIsReached(string current)
         {
             var continuations = wordList.Where(w => !used.Contains(w) && HaveOneLetterDifference(w, current));
-            
+
             foreach (var possibleContinuation in continuations)
             {
                 if (possibleContinuation == endWord)
@@ -92,13 +92,13 @@ public class Solution
     private static bool HaveOneLetterDifference(string a, string b)
     {
         var hadDifference = false;
-        
+
         for (var i = 0; i < a.Length; i++)
             if (a[i] != b[i])
             {
                 if (hadDifference)
                     return false;
-                
+
                 hadDifference = true;
             }
 

@@ -11,13 +11,13 @@ public class Solution
     {
         if (root == null! || root == p || root == q)
             return root!;
-        
+
         var right = LowestCommonAncestor(root.right, p, q);
         var left = LowestCommonAncestor(root.left, p, q);
-        
+
         if (left != null! && right != null!)
             return root;
-        
+
         return right ?? left!;
     }
 }

@@ -7,9 +7,9 @@ public class Solution
     public IList<IList<int>> LevelOrder(Node root)
     {
         IList<IList<int>> result = new List<IList<int>>();
-        
+
         Traverse(root, result);
-        
+
         return result;
     }
 
@@ -17,12 +17,12 @@ public class Solution
     {
         if (node == null)
             return;
-        
+
         if (res.Count <= level)
             res.Add(new List<int>());
-        
+
         res[level].Add(node.val);
-        
+
         foreach (var n in node.children)
             Traverse(n, res, level + 1);
     }

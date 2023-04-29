@@ -8,10 +8,10 @@ public class Solution
     {
         var sortedList = new SortedList<int, List<(int, int)>>();
         var result = new List<IList<int>>();
-        
-        if (root == null) 
+
+        if (root == null)
             return result;
-        
+
         AddElement(sortedList, root, 0, 0);
 
         result.AddRange(sortedList.Select(list => list.Value

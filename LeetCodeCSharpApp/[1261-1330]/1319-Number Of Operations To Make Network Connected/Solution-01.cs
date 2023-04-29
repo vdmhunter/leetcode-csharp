@@ -34,7 +34,7 @@ public class Solution
         }
 
         var components = new HashSet<int>();
-        
+
         for (var i = 0; i < n; i++)
             components.Add(GetRoot(parent, i));
 

@@ -6,7 +6,7 @@ public class Solution
     {
         var result = 1;
         var hs = new HashSet<char>();
-        
+
         foreach (var c in s)
         {
             if (hs.Contains(c))
@@ -21,4 +21,3 @@ public class Solution
         return result;
     }
 }
-

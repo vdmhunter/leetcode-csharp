@@ -6,7 +6,7 @@ public class Solution
     {
         var partitions = new List<IList<string>>();
         Backtrack(partitions, new List<string>(), s, 0);
-        
+
         return partitions;
     }
 
@@ -15,7 +15,7 @@ public class Solution
         if (start == s.Length)
         {
             partitions.Add(new List<string>(currentPartition));
-         
+
             return;
         }
 
@@ -33,7 +33,7 @@ public class Solution
         while (start < end)
             if (s[start++] != s[end--])
                 return false;
-        
+
         return true;
     }
 }

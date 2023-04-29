@@ -6,11 +6,11 @@ public class Solution
     {
         var stack = new Stack<string>();
 
-        foreach (var elem in path.Split('/'))
-            if (stack.Count > 0 && elem == "..")
+        foreach (var e in path.Split('/'))
+            if (stack.Count > 0 && e == "..")
                 stack.Pop();
-            else if (elem != "." && elem != "" && elem != "..")
-                stack.Push(elem);
+            else if (e != "." && e != "" && e != "..")
+                stack.Push(e);
 
         var result = string.Join('/', stack.Reverse());
 

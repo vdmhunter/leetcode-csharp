@@ -24,10 +24,10 @@ public class EventRangeComparer : IComparer<(int, int)>
     {
         if (x.Item2 <= y.Item1)
             return -1;
-        
+
         if (y.Item2 <= x.Item1)
             return 1;
-        
+
         return 0;
     }
 }

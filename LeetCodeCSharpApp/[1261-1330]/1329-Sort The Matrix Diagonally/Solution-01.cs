@@ -7,9 +7,9 @@ public class Solution
         var n = mat.Length;
         var m = mat[0].Length;
         var hm = new Dictionary<int, List<int>>();
-        
+
         FillHashMap(mat, n, m, hm);
-        
+
         foreach (var item in hm)
             item.Value.Sort();
 

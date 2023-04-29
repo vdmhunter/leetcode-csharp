@@ -4,6 +4,7 @@ public class Solution
 {
     private const int Mod = 1_000_000_007;
     private readonly int[,] _dp = new int[1001, 1024];
+
     private readonly int[] _f =
     {
         -1, 0, 1, 2, -1, 4, 3, 8, -1, -1, 5, 16, -1, 32, 9, 6, -1, 64, -1, 128, -1, 10, 17, 256, -1, -1, 33, -1, -1,

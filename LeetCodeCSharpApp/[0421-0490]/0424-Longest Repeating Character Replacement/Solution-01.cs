@@ -6,11 +6,11 @@ public class Solution
     {
         int result = 0, max = 0;
         var count = new int[128];
-        
+
         for (var i = 0; i < s.Length; ++i)
         {
             max = Math.Max(max, ++count[s[i]]);
-            
+
             if (result - max < k)
                 result++;
             else

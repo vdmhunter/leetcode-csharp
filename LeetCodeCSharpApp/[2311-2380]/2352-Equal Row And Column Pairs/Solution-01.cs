@@ -11,7 +11,7 @@ public class Solution
         for (var i = 0; i < n; i++)
         {
             var s = string.Empty;
-            
+
             for (var j = 0; j < n; j++)
                 s += Convert.ToString(grid[j][i]) + ",";
 
@@ -24,7 +24,7 @@ public class Solution
         for (var i = 0; i < n; i++)
         {
             var s = string.Join(",", grid[i].Select(j => j.ToString()).ToArray()) + ",";
-            count += dic.ContainsKey(s) ? dic[s] : 0;
+            count += dic.TryGetValue(s, out var value) ? value : 0;
         }
 
         return count;

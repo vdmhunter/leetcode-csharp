@@ -14,7 +14,7 @@ public class TwoSumIVInputIsABstTests
     private readonly Solution01.Solution _solution01;
 
     private const string ProblemName = "0653-Two Sum IV - Input is a BST";
-    
+
     #region Test Case 001
 
     private readonly TreeNode _testcase001_root = "[5,3,6,2,4,null,7]".ToBinaryTree();
@@ -22,12 +22,12 @@ public class TwoSumIVInputIsABstTests
     private readonly bool _testcase001_output = true;
 
     #endregion
-    
+
     public TwoSumIVInputIsABstTests()
     {
         _solution01 = new Solution01.Solution();
     }
-    
+
     #region Solution-01
 
     [Fact]
@@ -37,6 +37,6 @@ public class TwoSumIVInputIsABstTests
         var output = _solution01.FindTarget(_testcase001_root, _testcase001_k);
         Assert.Equal(_testcase001_output, output);
     }
-    
+
     #endregion
 }

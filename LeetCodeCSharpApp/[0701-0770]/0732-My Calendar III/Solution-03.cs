@@ -40,10 +40,10 @@ public class MyCalendarThree
     {
         int prev;
         int? next;
-        
+
         var keyList = _starts.Keys.ToList();
         var idx = keyList.BinarySearch(x);
-        
+
         switch (idx)
         {
             case < 0 when ~idx == keyList.Count:

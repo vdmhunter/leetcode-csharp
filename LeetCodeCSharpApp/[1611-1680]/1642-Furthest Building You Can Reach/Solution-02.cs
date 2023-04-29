@@ -10,7 +10,7 @@ public class Solution
         var n = heights.Length;
         var diffs = new int[n][];
         diffs[0] = new[] { 0, 0 }; // diffs (floored at 0) with original index
-        
+
         for (var i = 1; i < n; i++)
             diffs[i] = new[] { i, Math.Max(heights[i] - heights[i - 1], 0) };
 
@@ -21,10 +21,10 @@ public class Solution
         while (l <= r)
         {
             var mid = (l + r) / 2;
-            
+
             // use ladders for the largest diffs with index<=mid
             var usedBricks = 0;
-            
+
             for (int i = 0, lads = ladders; i < n; i++)
                 if (diffs[i][0] <= mid)
                 {

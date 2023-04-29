@@ -9,13 +9,13 @@ public class Solution
     {
         int fast;
         var slow = fast = n;
-        
+
         do
         {
             slow = DigitSquareSum(slow);
             fast = DigitSquareSum(fast);
             fast = DigitSquareSum(fast);
-            
+
             if (fast == 1)
                 return true;
             
@@ -27,7 +27,7 @@ public class Solution
     private int DigitSquareSum(int n)
     {
         var sum = 0;
-        
+
         while (n > 0)
         {
             var tmp = n % 10;

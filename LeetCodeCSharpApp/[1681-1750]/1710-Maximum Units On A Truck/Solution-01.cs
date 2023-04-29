@@ -13,7 +13,7 @@ public class Solution
             var count = Math.Min(b[0], truckSize);
             result += count * b[1];
             truckSize -= count;
-            
+
             if (truckSize == 0)
                 return result;
         }

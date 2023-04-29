@@ -9,7 +9,7 @@ public class Solution
 
         // Count the number with digits < n
         var result = 0;
-        
+
         for (var i = 1; i < list.Count; ++i)
             result += 9 * A(9, i - 1);
 

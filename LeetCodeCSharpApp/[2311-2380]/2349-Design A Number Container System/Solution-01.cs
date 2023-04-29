@@ -27,16 +27,16 @@ public class NumberContainers
             _indexNumberMap.Add(index, number);
         }
 
-        if (_numberIndexMap.ContainsKey(number))
-            _numberIndexMap[number].Add(index);
+        if (_numberIndexMap.TryGetValue(number, out var value))
+            value.Add(index);
         else
             _numberIndexMap.Add(number, new SortedSet<int> { index });
     }
 
     public int Find(int number)
     {
-        if (_numberIndexMap.ContainsKey(number))
-            return _numberIndexMap[number].Min;
+        if (_numberIndexMap.TryGetValue(number, out var value))
+            return value.Min;
 
         return -1;
     }

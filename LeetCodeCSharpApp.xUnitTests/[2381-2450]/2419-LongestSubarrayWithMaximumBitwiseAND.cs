@@ -33,6 +33,7 @@ public class LongestSubarrayWithMaximumBitwiseANDTests
 
     private readonly int[] _testcase003_nums =
         { 96317, 96317, 96317, 96317, 96317, 96317, 96317, 96317, 96317, 279979 };
+
     private readonly int _testcase003_output = 1;
 
     #endregion

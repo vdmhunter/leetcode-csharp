@@ -18,7 +18,7 @@ public class Solution
 
         return max;
     }
-    
+
     private uint WordToUInt(string word)
     {
         return word.ToCharArray().Aggregate(0u, (current, c) => current | (uint)(1 << (c - 97)));

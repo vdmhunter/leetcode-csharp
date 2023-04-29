@@ -44,18 +44,18 @@ public class Solution
     public int MaxProfit(int k, int[] prices)
     {
         var len = prices.Length;
-        
+
         if (k >= len / 2)
             return QuickSolve(prices);
 
         var t = new int[k + 1][];
         t[0] = new int[len];
-        
+
         for (var i = 1; i <= k; i++)
         {
             t[i] = new int[len];
             var tmpMax = -prices[0];
-            
+
             for (var j = 1; j < len; j++)
             {
                 t[i][j] = Math.Max(t[i][j - 1], prices[j] + tmpMax);
@@ -69,11 +69,11 @@ public class Solution
     private static int QuickSolve(IReadOnlyList<int> prices)
     {
         int len = prices.Count, profit = 0;
-        
+
         for (var i = 1; i < len; i++)
             if (prices[i] > prices[i - 1])
                 profit += prices[i] - prices[i - 1];
-        
+
         return profit;
     }
 }

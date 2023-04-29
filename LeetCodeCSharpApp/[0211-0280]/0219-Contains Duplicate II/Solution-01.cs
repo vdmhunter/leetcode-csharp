@@ -8,14 +8,14 @@ public class Solution
             return false;
 
         var map = new Dictionary<int, int>();
-        
+
         for (var i = 0; i < nums.Length; i++)
         {
             var num = nums[i];
-            
+
             if (map.ContainsKey(num) && i - map[num] <= k)
                 return true;
-            
+
             map[num] = i;
         }
 

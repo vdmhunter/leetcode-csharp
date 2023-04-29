@@ -6,9 +6,9 @@ public class Solution
     {
         if (image[sr][sc] == color)
             return image;
-        
+
         Fill(image, sr, sc, image[sr][sc], color);
-        
+
         return image;
     }
 

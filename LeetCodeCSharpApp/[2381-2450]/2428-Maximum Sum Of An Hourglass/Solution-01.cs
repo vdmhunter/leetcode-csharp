@@ -5,7 +5,7 @@ public class Solution
     public int MaxSum(int[][] grid)
     {
         var result = int.MinValue;
-        
+
         for (var m = 0; m <= grid.Length - 3; m++)
             for (var n = 0; n <= grid[0].Length - 3; n++)
                 result = Math.Max(result, Sum(grid, m, n));

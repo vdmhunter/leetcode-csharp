@@ -10,7 +10,7 @@ public class Solution
         while (low <= high)
         {
             var mid = (low + high) / 2;
-            
+
             if (nums[mid] == target)
                 return mid;
 

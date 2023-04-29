@@ -10,7 +10,7 @@ public class Solution
         for (var i = 0; i < mat.Length; i++)
         {
             var count = 0;
-            
+
             for (var j = 0; j < mat[i].Length; j++)
                 if (mat[i][j] == 1)
                     count++;

@@ -14,13 +14,13 @@ public class Solution
                 countOfZeros++;
                 continue;
             }
-                
+
             if (countOfZeros != 0)
                 result += (1 + countOfZeros) * countOfZeros / 2;
 
             countOfZeros = 0;
         }
-		
+
         result += (1 + countOfZeros) * countOfZeros / 2;
 
         return result;

@@ -13,7 +13,7 @@ public class Solution
         Array.Sort(meetings, (a, b) => a[0] - b[0]);
 
         var arr = new int[n];
-        
+
         foreach (var meeting in meetings)
         {
             var start = meeting[0];
@@ -40,7 +40,7 @@ public class Solution
         }
 
         var res = 0;
-        
+
         for (var i = 0; i < arr.Length; i++)
             if (arr[i] > arr[res])
                 res = i;

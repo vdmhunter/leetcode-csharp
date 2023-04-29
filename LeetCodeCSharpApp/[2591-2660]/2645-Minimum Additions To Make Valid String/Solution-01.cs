@@ -15,7 +15,7 @@ public class Solution
         }
 
         cnt += pos > 0 ? 1 : 0;
-        
+
         return cnt * 3 - word.Length;
     }
 }

@@ -10,9 +10,9 @@ public class Solution
 
         if (idx == -1)
             return num;
-        
+
         arr[idx] = '9';
-            
+
         return Convert.ToInt32(new string(arr));
     }
 }

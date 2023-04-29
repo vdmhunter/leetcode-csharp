@@ -8,7 +8,7 @@ public class Solution
 
         // if we cant make 4 equals sides then theres no way to make a square
         if (total % 4 != 0)
-            return false; 
+            return false;
 
         // sort the array and place the largest sides first. required optimization to not TLE
         Array.Sort(matchsticks);

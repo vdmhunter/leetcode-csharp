@@ -10,7 +10,7 @@ public class Solution
         var candies = new int[ratings.Length];
         Array.Fill(candies, 1);
         var hasChanged = true;
-        
+
         while (hasChanged)
         {
             hasChanged = false;
@@ -21,7 +21,7 @@ public class Solution
                     candies[i] = candies[i + 1] + 1;
                     hasChanged = true;
                 }
-                
+
                 if (i > 0 && ratings[i] > ratings[i - 1] && candies[i] <= candies[i - 1])
                 {
                     candies[i] = candies[i - 1] + 1;

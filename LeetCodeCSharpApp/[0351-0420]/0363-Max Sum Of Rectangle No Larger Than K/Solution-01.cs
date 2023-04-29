@@ -5,6 +5,7 @@ namespace LeetCodeCSharpApp.MaxSumOfRectangleNoLargerThanK01;
 public class Solution
 {
     private int[][]? _sums;
+
     public int MaxSumSubmatrix(int[][] matrix, int k)
     {
         int rows = matrix.Length, cols = matrix[0].Length;
@@ -14,7 +15,7 @@ public class Solution
             _sums[i] = new int[cols + 1];
 
         var result = int.MinValue;
-        
+
         for (var i = 0; i < rows; i++)
             for (var j = 0; j < cols; j++)
             {
@@ -30,7 +31,7 @@ public class Solution
     private bool RectangleSum(int i, int j, int k, ref int result, out int submatrixSum)
     {
         submatrixSum = result;
-        
+
         for (var rectangleHeight = 0; rectangleHeight <= i; rectangleHeight++)
             for (var rectangleWidth = 0; rectangleWidth <= j; rectangleWidth++)
             {

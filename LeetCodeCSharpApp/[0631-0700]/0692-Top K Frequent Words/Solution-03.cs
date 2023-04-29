@@ -8,7 +8,7 @@ public class Solution
     public IList<string> TopKFrequent(string[] words, int k)
     {
         var frequencyMap = new Dictionary<string, int>();
-        
+
         foreach (var word in words)
         {
             frequencyMap.TryGetValue(word, out var count);
@@ -16,7 +16,7 @@ public class Solution
         }
 
         var buckets = new SortedSet<string>[frequencyMap.Count + 1];
-        
+
         foreach (var frequency in frequencyMap)
             if (buckets[frequency.Value] == null)
                 buckets[frequency.Value] = new SortedSet<string> { frequency.Key };
@@ -24,7 +24,7 @@ public class Solution
                 buckets[frequency.Value].Add(frequency.Key);
 
         var result = new List<string>();
-        
+
         for (var frequency = frequencyMap.Count; frequency > 0 && result.Count < k; frequency--)
             if (buckets[frequency] != null)
                 foreach (var word in buckets[frequency])

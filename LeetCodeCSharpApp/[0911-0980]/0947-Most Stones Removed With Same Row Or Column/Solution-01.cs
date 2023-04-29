@@ -1,7 +1,7 @@
 namespace LeetCodeCSharpApp.MostStonesRemovedWithSameRowOrColumn01;
 
 // https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/solutions/197668/count-the-number-of-islands-o-n/
- 
+
 public class Solution
 {
     private readonly Dictionary<int, int> _f = new();

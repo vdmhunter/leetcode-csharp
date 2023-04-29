@@ -38,7 +38,7 @@ public class CountOfSmallerNumbersAfterSelfTests
     private readonly int[] _testcase003_output = { 0, 0 };
 
     #endregion
-    
+
     #region Test Case 004
 
     private readonly int[] _testcase004_nums = Array.Empty<int>();
@@ -46,7 +46,7 @@ public class CountOfSmallerNumbersAfterSelfTests
     private readonly int[] _testcase004_output = Array.Empty<int>();
 
     #endregion
-    
+
 
     public CountOfSmallerNumbersAfterSelfTests()
     {
@@ -79,7 +79,7 @@ public class CountOfSmallerNumbersAfterSelfTests
         var output = _solution01.CountSmaller(_testcase003_nums);
         Assert.Equal(_testcase003_output, output);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-01")]
     public void Solution01_TestCase004()

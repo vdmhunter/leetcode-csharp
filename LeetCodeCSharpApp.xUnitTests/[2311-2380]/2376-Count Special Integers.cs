@@ -66,7 +66,7 @@ public class CountSpecialIntegersTests
         var output = _solution01.CountSpecialNumbers(_testcase003_n);
         Assert.Equal(_testcase003_output, output);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-02")]
     public void Solution02_TestCase001()

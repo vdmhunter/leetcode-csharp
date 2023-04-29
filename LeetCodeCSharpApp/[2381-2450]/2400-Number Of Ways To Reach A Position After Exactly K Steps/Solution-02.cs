@@ -8,12 +8,12 @@ public class Solution
     {
         if ((startPos - endPos - k) % 2 != 0)
             return 0;
-        
+
         if (Math.Abs(startPos - endPos) > k)
             return 0;
-        
+
         var result = 1L;
-        
+
         for (var i = 0; i < (endPos - startPos + k) / 2; ++i)
         {
             result = result * (k - i) % Mode;
@@ -27,7 +27,7 @@ public class Solution
     {
         if (a == 1)
             return 1;
-        
+
         return (Mode - Mode / a) * Inv(Mode % a) % Mode;
     }
 }

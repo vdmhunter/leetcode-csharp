@@ -5,7 +5,7 @@ public class Solution
     public int FirstUniqChar(string s)
     {
         var dp = new int['z' - 'a' + 1];
-        
+
         foreach (var c in s)
             dp[c - 'a']++;
 

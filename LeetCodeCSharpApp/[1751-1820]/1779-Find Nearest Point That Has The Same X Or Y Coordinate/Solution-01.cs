@@ -5,7 +5,7 @@ public class Solution
     public int NearestValidPoint(int x, int y, int[][] points)
     {
         var index = -1;
-        
+
         for (int i = 0, smallest = int.MaxValue; i < points.Length; ++i)
         {
             int dx = x - points[i][0], dy = y - points[i][1];

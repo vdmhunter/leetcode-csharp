@@ -7,7 +7,7 @@ public class Solution
         var n = word.Length;
         var result = new List<int>(n);
         var sm = 0L;
-        
+
         for (var i = 0; i < n; i++)
         {
             sm = (sm * 10 + (word[i] - '0')) % m;

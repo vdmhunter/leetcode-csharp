@@ -7,11 +7,11 @@ public class Solution
         for (var i = 2; i <= n - 2; i++)
         {
             var arr = DecimalToArbitrarySystem(n, i).ToArray();
-            
+
             if (!arr.SequenceEqual(arr.Reverse()))
                 return false;
         }
-        
+
         return true;
     }
 
@@ -19,7 +19,7 @@ public class Solution
     {
         if (number == 0)
             return new List<int> { 0 };
-        
+
         var result = new List<int>();
 
         while (number != 0)

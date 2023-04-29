@@ -27,7 +27,7 @@ public class Solution
     private static List<int> GetIthList(int index, int shift, int[] arr)
     {
         var result = new List<int>();
-        
+
         for (var i = index; i < arr.Length; i += shift)
             result.Add(arr[i]);
 

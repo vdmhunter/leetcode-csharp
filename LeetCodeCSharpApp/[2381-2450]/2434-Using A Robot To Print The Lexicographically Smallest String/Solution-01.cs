@@ -12,7 +12,7 @@ public class Solution
 
         foreach (var c in s)
             freq[c - 'a']++;
-        
+
         foreach (var c in s)
         {
             stack.Push(c);

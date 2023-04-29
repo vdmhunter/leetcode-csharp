@@ -6,11 +6,11 @@ public class Solution
     {
         var dictionary = new Dictionary<int, int> { { 0, -1 } };
         var runningSum = 0;
-        
+
         for (var i = 0; i < nums.Length; i++)
         {
             runningSum += nums[i];
-            
+
             if (k != 0)
                 runningSum %= k;
 

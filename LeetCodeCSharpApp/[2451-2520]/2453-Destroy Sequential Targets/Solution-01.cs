@@ -20,10 +20,10 @@ public class Solution
         return nums.Max(Comparer<int>.Create((x, y) =>
         {
             int c1 = dic[x % space], c2 = dic[y % space];
-            
+
             if (c1 == c2)
                 return x > y ? -1 : x < y ? 1 : 0;
-            
+
             return c1 > c2 ? 1 : c1 < c2 ? -1 : 0;
         }));
     }

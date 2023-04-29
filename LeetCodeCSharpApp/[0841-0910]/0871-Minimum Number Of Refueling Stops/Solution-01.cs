@@ -6,7 +6,7 @@ public class Solution
     {
         int index = 0, count = 0;
         var pq = new PriorityQueue<int, int>();
-        
+
         while (startFuel < target)
         {
             while (index != stations.Length && stations[index][0] <= startFuel)
@@ -14,14 +14,14 @@ public class Solution
                 pq.Enqueue(stations[index][1], -stations[index][1]);
                 index++;
             }
-            
+
             if (pq.Count == 0)
                 return -1;
-            
+
             startFuel += pq.Dequeue();
             count++;
         }
-        
+
         return count;
     }
 }

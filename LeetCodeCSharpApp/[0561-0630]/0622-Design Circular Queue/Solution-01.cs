@@ -18,11 +18,11 @@ public class MyCircularQueue
     {
         if (IsFull())
             return false;
-        
+
         _count++;
         _rear = (_rear + 1) % _q.Length;
         _q[_rear] = value;
-        
+
         return true;
     }
 
@@ -30,17 +30,17 @@ public class MyCircularQueue
     {
         if (IsEmpty())
             return false;
-        
+
         _count--;
         _front = (_front + 1) % _q.Length;
-        
+
         return true;
     }
 
     public int Front() => IsEmpty() ? -1 : _q[_front];
 
     public int Rear() => IsEmpty() ? -1 : _q[_rear];
-    
+
     public bool IsEmpty() => _count == 0;
 
     public bool IsFull() => _count == _q.Length;

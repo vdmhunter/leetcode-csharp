@@ -14,7 +14,7 @@ public class Solution
                 else
                     dp[i, j] = Math.Max(dp[i - 1, j], dp[i, j - 1]);
         }
-        
+
         return dp[text1.Length, text2.Length];
     }
 }

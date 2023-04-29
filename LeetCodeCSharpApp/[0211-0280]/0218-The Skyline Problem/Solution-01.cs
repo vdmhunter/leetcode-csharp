@@ -10,7 +10,7 @@ public class Solution
     private IList<IList<int>> Merge(int[][] buildings, int lo, int hi)
     {
         var result = new List<IList<int>>();
-        
+
         if (lo > hi)
             return result;
 
@@ -18,7 +18,7 @@ public class Solution
         {
             result.Add(new[] { buildings[lo][0], buildings[lo][2] });
             result.Add(new[] { buildings[lo][1], 0 });
-            
+
             return result;
         }
 
@@ -26,13 +26,13 @@ public class Solution
         var left = Merge(buildings, lo, mid);
         var right = Merge(buildings, mid + 1, hi);
         int leftH = 0, rightH = 0;
-        
+
         while (left.Count != 0 || right.Count != 0)
         {
             var x1 = left.Count == 0 ? long.MaxValue : left[0][0];
             var x2 = right.Count == 0 ? long.MaxValue : right[0][0];
             int x;
-            
+
             if (x1 < x2)
             {
                 var temp = left[0].ToArray();
@@ -57,7 +57,7 @@ public class Solution
             }
 
             var h = Math.Max(leftH, rightH);
-            
+
             if (result.Count == 0 || h != result[^1][1])
                 result.Add(new[] { x, h });
         }

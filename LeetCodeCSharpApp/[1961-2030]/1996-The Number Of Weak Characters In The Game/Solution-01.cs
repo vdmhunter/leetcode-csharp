@@ -15,7 +15,7 @@ public class Solution
         {
             if (properties[i][1] < max)
                 count++;
-            
+
             max = Math.Max(max, properties[i][1]);
         }
 

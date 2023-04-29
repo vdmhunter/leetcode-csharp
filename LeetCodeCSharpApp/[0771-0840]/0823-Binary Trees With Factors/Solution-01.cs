@@ -12,7 +12,7 @@ public class Solution
         for (var i = 1; i < nums.Length; i++)
         {
             dp[i] = 1;
-            
+
             for (var j = 0; j < i; j++)
                 if (nums[i] % nums[j] == 0 && numToIndex.TryGetValue(nums[i] / nums[j], out var index))
                     dp[i] = Add(dp[i], Mul(dp[j], dp[index]));

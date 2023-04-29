@@ -13,7 +13,7 @@ public class Solution
             _g[(g[0], g[1])] = 1;
 
         var adj = new List<List<int>>();
-        
+
         for (var i = 0; i <= n; i++)
             adj.Add(new List<int>());
 
@@ -24,11 +24,11 @@ public class Solution
         }
 
         var count = 0;
-        
+
         for (var i = 0; i <= n; i++)
         {
             var guess = Dp(adj, i, -1);
-            
+
             if (guess >= k)
                 count++;
         }

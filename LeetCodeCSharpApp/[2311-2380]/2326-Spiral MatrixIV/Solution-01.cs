@@ -26,9 +26,9 @@ public class Solution
         {
             for (var i = colStart; i <= colEnd; i++)
             {
-                if(ln == null)
+                if (ln == null)
                     return matrix;
-                
+
                 matrix[rowStart][i] = ln.val;
                 ln = ln.next;
             }
@@ -37,9 +37,9 @@ public class Solution
 
             for (var i = rowStart; i <= rowEnd; i++)
             {
-                if(ln == null)
+                if (ln == null)
                     return matrix;
-                
+
                 matrix[i][colEnd] = ln.val;
                 ln = ln.next;
             }
@@ -49,9 +49,9 @@ public class Solution
             for (var i = colEnd; i >= colStart; i--)
                 if (rowStart <= rowEnd)
                 {
-                    if(ln == null)
+                    if (ln == null)
                         return matrix;
-                    
+
                     matrix[rowEnd][i] = ln.val;
                     ln = ln.next;
                 }
@@ -61,9 +61,9 @@ public class Solution
             for (var i = rowEnd; i >= rowStart; i--)
                 if (colStart <= colEnd)
                 {
-                    if(ln == null)
+                    if (ln == null)
                         return matrix;
-                    
+
                     matrix[i][colStart] = ln.val;
                     ln = ln.next;
                 }

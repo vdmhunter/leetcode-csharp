@@ -16,4 +16,3 @@ public class Solution
                (bfl ? BeautifulSubsets(nums, k, i + 1, mask + (1 << i)) : 0);
     }
 }
-

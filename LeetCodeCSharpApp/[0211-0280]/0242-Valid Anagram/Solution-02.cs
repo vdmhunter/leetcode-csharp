@@ -5,7 +5,7 @@ public class Solution
     public bool IsAnagram(string s, string t)
     {
         var alphabet = new int[26];
-        
+
         foreach (var i in s)
             alphabet[i - 'a']++;
 

@@ -8,7 +8,7 @@ public class Solution
     {
         var result = new List<int>();
         InorderTraversal(root, result);
-        
+
         return result;
     }
 
@@ -16,7 +16,7 @@ public class Solution
     {
         if (root == null!)
             return;
-        
+
         InorderTraversal(root.left, list);
         list.Add(root.val);
         InorderTraversal(root.right, list);

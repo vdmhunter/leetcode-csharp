@@ -8,7 +8,7 @@ public class Solution
     {
         ListNode smallerHead = new(), biggerHead = new();
         ListNode smaller = smallerHead, bigger = biggerHead;
-        
+
         while (head != null)
         {
             if (head.val < x)
@@ -18,10 +18,10 @@ public class Solution
 
             head = head.next;
         }
-        
+
         smaller.next = biggerHead.next;
         bigger.next = null!;
-        
+
         return smallerHead.next;
     }
 }

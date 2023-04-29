@@ -20,9 +20,9 @@ public class Solution
         while (!stack.Any())
         {
             root = stack.Pop();
-            
+
             list.Add(root.val);
-            
+
             for (var i = root.children.Count - 1; i >= 0; i--)
                 stack.Push(root.children[i]);
         }

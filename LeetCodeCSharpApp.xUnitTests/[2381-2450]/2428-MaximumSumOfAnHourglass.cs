@@ -18,6 +18,7 @@ public class MaximumSumOfAnHourglass
 
     private readonly int[][] _testcase001_grid =
         { new[] { 6, 2, 1, 3 }, new[] { 4, 2, 1, 5 }, new[] { 9, 2, 8, 7 }, new[] { 4, 1, 2, 9 } };
+
     private readonly int _testcase001_output = 30;
 
     #endregion

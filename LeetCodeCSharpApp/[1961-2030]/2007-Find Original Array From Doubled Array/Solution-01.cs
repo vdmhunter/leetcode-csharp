@@ -5,13 +5,13 @@ public class Solution
     public int[] FindOriginalArray(int[] changed)
     {
         if (changed.Length % 2 == 1) // this is important for zeros
-            return Array.Empty<int>(); 
+            return Array.Empty<int>();
 
         var count = new int[200001];
         foreach (var val in changed) ++count[val];
 
         List<int> result = new(Enumerable.Repeat(0, count[0] / 2)); // zero is special case
-        
+
         for (var val = 1; val <= 100000; ++val)
         {
             if (count[val] == 0)

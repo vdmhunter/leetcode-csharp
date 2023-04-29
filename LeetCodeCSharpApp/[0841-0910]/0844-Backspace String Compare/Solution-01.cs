@@ -11,7 +11,7 @@ public class Solution
     {
         int n = str.Length, count = 0;
         var result = string.Empty;
-        
+
         for (var i = n - 1; i >= 0; i--)
         {
             var ch = str[i];

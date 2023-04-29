@@ -30,7 +30,7 @@ public class Solution
             var currentColor = houses[houseIdx];
             _memo[houseIdx, prevColor, target] = Dfs(houses, cost, houseIdx + 1, currentColor,
                 target - (currentColor != prevColor ? 1 : 0));
-            
+
             return _memo[houseIdx, prevColor, target]!.Value;
         }
 
@@ -42,12 +42,12 @@ public class Solution
                 target - (currentColor != prevColor
                     ? 1
                     : 0)); //if prev color != current color means we have a new neighborhood so target - 1
-            
+
             res = Math.Min(res, val + cost[houseIdx][currentColor - 1]); //store the minimum
         }
 
         _memo[houseIdx, prevColor, target] = res;
-        
+
         return _memo[houseIdx, prevColor, target]!.Value;
     }
 }

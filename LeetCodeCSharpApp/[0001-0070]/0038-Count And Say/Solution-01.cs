@@ -7,10 +7,10 @@ public class Solution
     public string CountAndSay(int n)
     {
         var s = "1";
-        
+
         for (var i = 1; i < n; i++)
             s = CountIdx(s);
-        
+
         return s;
     }
 
@@ -19,7 +19,7 @@ public class Solution
         var sb = new StringBuilder();
         var c = s[0];
         var count = 1;
-        
+
         for (var i = 1; i < s.Length; i++)
             if (s[i] == c)
                 count++;
@@ -33,7 +33,7 @@ public class Solution
 
         sb.Append(count);
         sb.Append(c);
-        
+
         return sb.ToString();
     }
 }

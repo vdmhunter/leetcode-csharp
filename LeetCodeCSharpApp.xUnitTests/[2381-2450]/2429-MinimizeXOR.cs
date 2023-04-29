@@ -13,7 +13,7 @@ public class MinimizeXOR
     private readonly Solution01.Solution _solution01;
 
     private const string ProblemName = "2429-Minimize XOR";
-    
+
     #region Test Case 001
 
     private readonly int _testcase001_num1 = 3;
@@ -29,12 +29,12 @@ public class MinimizeXOR
     private readonly int _testcase002_output = 3;
 
     #endregion
-    
+
     public MinimizeXOR()
     {
         _solution01 = new Solution01.Solution();
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-01")]
     public void Solution01_TestCase001()

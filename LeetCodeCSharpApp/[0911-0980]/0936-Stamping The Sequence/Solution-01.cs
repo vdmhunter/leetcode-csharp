@@ -46,9 +46,9 @@ public class Solution
 
         if (changed != n)
             return Array.Empty<int>();
-        
+
         res.Reverse();
-        
+
         return res.ToArray();
     }
 }

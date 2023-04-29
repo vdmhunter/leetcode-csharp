@@ -15,23 +15,23 @@ public class Solution
         while (true)
         {
             var countMoreThanTwo = _freq.Count(x => x.Value >= 2);
-            
-            if(countMoreThanTwo == 0)
+
+            if (countMoreThanTwo == 0)
                 break;
-            
+
             var max = _freq.Where(x => x.Value >= 2).MaxBy(x => x.Key);
-            
+
             if (result.Length != 0 || max.Key != 0)
                 result.Append(max.Key);
-            
+
             _freq[max.Key] -= 2;
         }
-        
+
         var reversePart = ReverseString(result.ToString());
 
         var count = _freq.Count(x => x.Value >= 1);
-        
-        if(count >= 1)
+
+        if (count >= 1)
             result.Append(_freq.Where(x => x.Value >= 1).MaxBy(x => x.Key).Key);
 
         result.Append(reversePart);
@@ -52,13 +52,13 @@ public class Solution
                 _freq.Add(i, 1);
         }
     }
-    
+
     private static string ReverseString(string str)
     {
         var charArray = str.ToCharArray();
         Array.Reverse(charArray);
         var reversePart = new string(charArray);
-        
+
         return reversePart;
     }
 }

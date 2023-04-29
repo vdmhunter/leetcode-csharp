@@ -27,7 +27,7 @@ public class Solution
 
             if (nums[mid] == target)
             {
-                start = mid;     // This is start
+                start = mid; // This is start
                 right = mid - 1; // Lets see if there one more on the left
             }
             else if (target > nums[mid])
@@ -51,7 +51,7 @@ public class Solution
 
             if (nums[mid] == target)
             {
-                end = mid;      // This is the end
+                end = mid; // This is the end
                 left = mid + 1; // Lets see if there is one more on the right
             }
             else if (target > nums[mid])

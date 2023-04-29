@@ -13,9 +13,9 @@ public class ParkingSystem
     {
         if (_parking[carType] <= 0)
             return false;
-        
+
         _parking[carType]--;
-        
+
         return true;
     }
 }

@@ -6,7 +6,7 @@ public class Solution
     {
         var list = new List<int[]>();
         var n = buildings.Length;
-        
+
         for (var i = 0; i < n; i++)
         {
             list.Add(new[] { buildings[i][0], i });
@@ -18,7 +18,7 @@ public class Solution
         var pq = new PriorityQueue<int[], int>();
         var idx = 0;
         var result = new List<IList<int>>();
-        
+
         while (idx < list.Count)
         {
             var cur = list[idx][0];
@@ -26,7 +26,7 @@ public class Solution
             while (idx < list.Count && list[idx][0] == cur)
             {
                 var b = list[idx][1];
-                
+
                 if (buildings[b][0] == cur)
                 {
                     var right = buildings[b][1];

@@ -15,7 +15,6 @@ namespace LeetCodeCSharpApp.HeightOfBinaryTreeAfterSubtreeRemovalQueries01;
  * }
  * }
  */
-
 public class Solution
 {
     private readonly int[] _seen = new int[100001];
@@ -36,13 +35,13 @@ public class Solution
     {
         if (root == null)
             return;
-        
+
         _seen[root.val] = Math.Max(_seen[root.val], _maxHeight);
         _maxHeight = Math.Max(_maxHeight, h);
-        
+
         Dfs(root.left, h + 1);
         Dfs(root.right, h + 1);
-        
+
         (root.right, root.left) = (root.left, root.right);
     }
 }

@@ -6,10 +6,10 @@ public class Solution
     {
         if (coordinates == null)
             return false;
-        
-        if(coordinates.Length == 2)
+
+        if (coordinates.Length == 2)
             return true;
-        
+
         if (coordinates.Length < 3 || coordinates[0].Length == 0)
             return false;
 

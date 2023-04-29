@@ -20,7 +20,7 @@ public class MyCalendarThree
     {
         _diff[start] = _diff.GetValueOrDefault(start, 0) + 1;
         _diff[end] = _diff.GetValueOrDefault(end, 0) - 1;
-        
+
         int result = 0, cur = 0;
 
         foreach (var delta in _diff.Values)

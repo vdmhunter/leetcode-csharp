@@ -20,7 +20,7 @@ public class Solution
 
             var (di, dj) = directions[directionIndex];
             int ni = i + di, nj = j + dj;
-            
+
             if (ni < 0 || ni >= m || nj < 0 || nj >= n || seen.Contains((ni, nj)))
             {
                 directionIndex = (directionIndex + 1) % 4;

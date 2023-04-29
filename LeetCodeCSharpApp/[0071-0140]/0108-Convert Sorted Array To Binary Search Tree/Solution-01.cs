@@ -14,7 +14,7 @@ public class Solution
                 return null!;
 
             var middle = left + (right - left) / 2;
-            
+
             return new TreeNode(nums[middle])
             {
                 left = ToBst(left, middle - 1),

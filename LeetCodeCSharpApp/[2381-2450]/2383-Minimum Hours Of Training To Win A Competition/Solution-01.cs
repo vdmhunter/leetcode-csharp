@@ -7,7 +7,7 @@ public class Solution
         var currentEnergy = initialEnergy;
         var currentExperience = initialExperience;
         var totalHours = 0;
-        
+
         for (var i = 0; i < energy.Length; i++)
         {
             if (currentEnergy <= energy[i])

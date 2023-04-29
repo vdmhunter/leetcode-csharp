@@ -5,7 +5,7 @@ public class Solution
     public int MinSetSize(int[] arr)
     {
         var cnt = 0;
-        
+
         return arr
             .GroupBy(x => x)
             .Select(x => x.Count())

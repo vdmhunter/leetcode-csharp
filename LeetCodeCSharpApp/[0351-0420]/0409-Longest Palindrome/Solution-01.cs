@@ -6,10 +6,10 @@ public class Solution
     {
         if (string.IsNullOrEmpty(s))
             return 0;
-        
+
         var hs = new HashSet<char>();
         var count = 0;
-        
+
         foreach (var c in s)
             if (hs.Contains(c))
             {
@@ -21,7 +21,7 @@ public class Solution
 
         if (hs.Count != 0)
             return count * 2 + 1;
-        
+
         return count * 2;
     }
 }

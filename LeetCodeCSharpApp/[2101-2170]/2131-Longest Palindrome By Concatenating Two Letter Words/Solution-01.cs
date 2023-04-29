@@ -6,12 +6,12 @@ public class Solution
     {
         var counter = new int[26, 26];
         var result = 0;
-        
+
         foreach (var item in words)
         {
             var a = item[0] - 97;
             var b = item[1] - 97;
-            
+
             if (counter[b, a] > 0)
             {
                 result += 4;

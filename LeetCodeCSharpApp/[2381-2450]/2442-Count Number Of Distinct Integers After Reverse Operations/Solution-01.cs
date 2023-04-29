@@ -13,7 +13,7 @@ public class Solution
     private static int Reverse(int n)
     {
         var result = 0;
-        
+
         while (n > 0)
         {
             var remainder = n % 10;

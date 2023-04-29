@@ -8,17 +8,17 @@ public class Solution
 
     public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
     {
-        var ls = new List<IList<int>>();
+        var result = new List<IList<int>>();
         Dfs(root, 0);
         var bol = true;
 
         foreach (var item in _dict.Values)
         {
-            ls.Add(bol ? item : item.Select(x => x).Reverse().ToList());
+            result.Add(bol ? item : item.Select(x => x).Reverse().ToList());
             bol = !bol;
         }
 
-        return ls;
+        return result;
     }
 
     private void Dfs(TreeNode root, int i)

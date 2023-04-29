@@ -26,7 +26,7 @@ public static class TreeNodeExtensions
 
         return array.ToBinaryTree();
     }
-    
+
     // ReSharper disable once MemberCanBePrivate.Global
     public static TreeNode ToBinaryTree(this IReadOnlyList<int?> nodes)
     {
@@ -37,16 +37,16 @@ public static class TreeNodeExtensions
     {
         var list = new List<int>();
         var rights = new Stack<TreeNode>();
-        
+
         while (tree != null)
         {
             list.Add(tree.val);
-            
+
             if (tree.right != null)
                 rights.Push(tree.right);
-            
+
             tree = tree.left;
-            
+
             if (tree == null && rights.Count != 0)
                 tree = rights.Pop();
         }

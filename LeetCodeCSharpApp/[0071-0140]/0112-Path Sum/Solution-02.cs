@@ -10,7 +10,6 @@ public class Solution
             return false;
 
         var stack = new Stack<TreeNode>();
-
         stack.Push(root);
 
         while (stack.Count != 0)

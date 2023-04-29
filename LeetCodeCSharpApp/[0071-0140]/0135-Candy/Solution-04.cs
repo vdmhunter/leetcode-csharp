@@ -8,7 +8,6 @@ public class Solution
     public int Candy(int[] ratings)
     {
         var result = ratings.Length;
-
         int up = 0, down = 0, peak = 0;
 
         for (var i = 1; i < ratings.Length; i++)
@@ -19,9 +18,7 @@ public class Solution
                 result += peak = ++up;
             }
             else if (ratings[i - 1] == ratings[i])
-            {
                 peak = up = down = 0;
-            }
             else
             {
                 //put candies horizontally ending before i, hold putting on peak as long as down is not above

@@ -9,7 +9,7 @@ public class Solution
 {
     public int[] SmallestTrimmedNumbers(string[] nums, int[][] queries)
     {
-        var ans = new List<int>(queries.Length);
+        var result = new List<int>(queries.Length);
 
         foreach (var query in queries)
         {
@@ -20,14 +20,14 @@ public class Solution
                     ? trimmedInt
                     : BigInteger.Parse(n);
             }).ToList();
-            
+
             var smallest = bigNums.Select((n, i) => (n, i))
                 .OrderBy(e => (e.n, e.i))
                 .ElementAt(query[0] - 1);
 
-            ans.Add(smallest.i);
+            result.Add(smallest.i);
         }
 
-        return ans.ToArray();
+        return result.ToArray();
     }
 }

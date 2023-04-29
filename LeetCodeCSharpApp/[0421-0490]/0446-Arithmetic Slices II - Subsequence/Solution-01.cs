@@ -9,10 +9,10 @@ public class Solution
 
         var total = 0;
         var memo = new Dictionary<int, int>[nums.Length];
-        
+
         for (var i = 0; i < nums.Length; i++)
             memo[i] = new Dictionary<int, int>();
-        
+
         for (var i = 0; i < nums.Length; i++)
             for (var j = 0; j < i; j++)
             {

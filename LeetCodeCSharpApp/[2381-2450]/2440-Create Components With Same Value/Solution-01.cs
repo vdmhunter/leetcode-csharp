@@ -33,12 +33,12 @@ public class Solution
         int Fun(int subRoot, int parent, int reqSum)
         {
             var resultSum = nums[subRoot];
-            
+
             foreach (var child in tree[subRoot])
             {
                 if (child == parent)
                     continue;
-                
+
                 resultSum += Fun(child, subRoot, reqSum);
             }
 

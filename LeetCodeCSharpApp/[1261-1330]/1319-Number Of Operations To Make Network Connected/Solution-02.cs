@@ -33,7 +33,7 @@ public class Solution
 
     private static void Dfs(List<int>[] cons, int node, bool[] visited)
     {
-        if (visited[node]) 
+        if (visited[node])
             return;
 
         visited[node] = true;

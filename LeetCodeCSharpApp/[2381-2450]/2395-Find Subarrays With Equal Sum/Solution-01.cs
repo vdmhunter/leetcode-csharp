@@ -9,10 +9,10 @@ public class Solution
         for (var i = 1; i < nums.Length - 1; i++)
         {
             var sum = nums[i] + nums[i + 1];
-            
+
             if (hs.Contains(sum))
                 return true;
-            
+
             hs.Add(sum);
         }
 

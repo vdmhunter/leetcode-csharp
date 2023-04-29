@@ -6,7 +6,7 @@ public class Solution
     private int _patternLength;
     private readonly Stack<int> _stack = new();
     private int _number;
-    
+
     public string SmallestNumber(string pattern)
     {
         _patternLength = pattern.Length;
@@ -19,7 +19,7 @@ public class Solution
 
         while (_stack.Count > 0)
             _result += _stack.Pop().ToString();
-        
+
         return _result;
     }
 

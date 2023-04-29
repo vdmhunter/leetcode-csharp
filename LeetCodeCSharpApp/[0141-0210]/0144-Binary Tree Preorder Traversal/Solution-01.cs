@@ -9,7 +9,7 @@ public class Solution
     public IList<int> PreorderTraversal(TreeNode root)
     {
         Dfs(root);
-        
+
         return _result;
     }
 

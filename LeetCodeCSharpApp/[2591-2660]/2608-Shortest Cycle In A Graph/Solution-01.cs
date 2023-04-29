@@ -5,10 +5,10 @@ public class Solution
     public int FindShortestCycle(int n, int[][] edges)
     {
         var g = new List<List<int>>();
-        
+
         for (var i = 0; i < n; ++i)
             g.Add(new List<int>());
-        
+
         foreach (var e in edges)
         {
             g[e[0]].Add(e[1]);

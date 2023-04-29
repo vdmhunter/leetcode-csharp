@@ -8,7 +8,7 @@ public class Solution
     {
         var graph = new List<int>[n + 1];
 
-        for (var i = 1; i <= n; i++) 
+        for (var i = 1; i <= n; i++)
             graph[i] = new List<int>();
 
         foreach (var dislike in dislikes)
@@ -28,7 +28,7 @@ public class Solution
 
     private static bool Dfs(List<int>[] graph, int[] colors, int node, int color)
     {
-        if (colors[node] != 0) 
+        if (colors[node] != 0)
             return colors[node] == color;
 
         colors[node] = color;

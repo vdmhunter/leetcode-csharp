@@ -21,17 +21,17 @@ public class Solution
         {
             var levelSize = q.Count;
             var level = new List<int>(levelSize);
-            
+
             for (var i = 0; i < levelSize; i++)
             {
                 var cur = q.Dequeue();
-                
+
                 if (cur.left != null)
                     q.Enqueue(cur.left);
-                
+
                 if (cur.right != null)
                     q.Enqueue(cur.right);
-                
+
                 level.Add(cur.val);
             }
 

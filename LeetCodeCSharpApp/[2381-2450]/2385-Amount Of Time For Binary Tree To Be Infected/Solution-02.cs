@@ -46,7 +46,7 @@ public class Solution
             return;
 
         var value = root.val;
-        
+
         if (parent != -1)
         {
             FillAdjacencyDictionary(parent, value);
@@ -56,7 +56,7 @@ public class Solution
         CreateGraph(root.left, value);
         CreateGraph(root.right, value);
     }
-    
+
     private void FillAdjacencyDictionary(int key, int val)
     {
         if (_adjacencyDictionary.ContainsKey(key))

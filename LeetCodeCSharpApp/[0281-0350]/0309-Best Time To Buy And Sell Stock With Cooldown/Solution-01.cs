@@ -6,7 +6,7 @@ public class Solution
     {
         var n = prices.Length;
 
-        if (n == 0 || n == 1) 
+        if (n == 0 || n == 1)
             return 0;
 
         var sell = new int[n];

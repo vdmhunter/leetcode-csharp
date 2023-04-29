@@ -34,7 +34,7 @@ public class BestPokerHandTests
     private readonly string _testcase003_output = "Pair";
 
     #endregion
-    
+
     #region Test Case 004
 
     private readonly int[] _testcase004_ranks = { 1, 10, 2, 12, 9 };
@@ -73,7 +73,7 @@ public class BestPokerHandTests
         var output = _solution01.BestHand(_testcase003_ranks, _testcase003_suits);
         Assert.Equal(_testcase003_output, output);
     }
-    
+
     [Fact]
     [Trait("Category", $"{ProblemName}: Solution-01")]
     public void Solution01_TestCase004()

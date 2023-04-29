@@ -22,5 +22,5 @@ public class Solution
     private string GetDifferenceArrayAsString(string word)
     {
         return string.Join(",", word.Skip(1).Zip(word, (curr, prev) => curr - prev));
-    } 
+    }
 }

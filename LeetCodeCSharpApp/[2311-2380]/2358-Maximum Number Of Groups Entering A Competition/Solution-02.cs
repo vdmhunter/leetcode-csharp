@@ -10,7 +10,7 @@ public class Solution
         while (s <= e)
         {
             var mid = s + (e - s) / 2;
-            
+
             if (mid * (mid + 1) / 2 <= grades.Length)
             {
                 result = mid;

@@ -7,7 +7,7 @@ public class Solution
     public ListNode MiddleNode(ListNode head)
     {
         ListNode slow = head, fast = head;
-        
+
         while (fast != null && fast.next != null)
         {
             slow = slow.next;

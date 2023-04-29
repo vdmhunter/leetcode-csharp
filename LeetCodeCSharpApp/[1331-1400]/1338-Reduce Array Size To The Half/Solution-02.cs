@@ -17,11 +17,11 @@ public class Solution
 
         var minTarget = arr.Length / 2;
         var sum = 0;
-        
+
         for (var i = 0; i < l.Count; i++)
             if ((sum += l[i]) >= minTarget)
                 return i + 1;
 
-        return minTarget; 
+        return minTarget;
     }
 }

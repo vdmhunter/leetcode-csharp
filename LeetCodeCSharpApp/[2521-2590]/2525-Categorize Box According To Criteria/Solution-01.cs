@@ -11,7 +11,7 @@ public class Solution
     public string CategorizeBox(int length, int width, int height, int mass)
     {
         var idx = Convert.ToByte(length >= MaxDimension || width >= MaxDimension || height >= MaxDimension ||
-                                  (long)length * width * height >= MaxVolume) + 2 * Convert.ToByte(mass >= MaxMass);
+                                 (long)length * width * height >= MaxVolume) + 2 * Convert.ToByte(mass >= MaxMass);
 
         return Categories[idx];
     }

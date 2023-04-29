@@ -20,7 +20,7 @@ public class Solution
 
         if (c == '#' || p.Next[c - 'a'] == null)
             return;
-        
+
         p = p.Next[c - 'a'];
 
         if (p.Word != null)

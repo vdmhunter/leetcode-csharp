@@ -23,7 +23,7 @@ public class Solution
             else
             {
                 var last = curr.left;
-                
+
                 while (last.right != null && last.right != curr)
                     last = last.right;
 

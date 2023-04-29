@@ -58,7 +58,7 @@ public class Solution
     {
         var dx = Math.Abs(x1 - x2);
         var dy = Math.Abs(y1 - y2);
-            
+
         return (dx == 1 && dy == 2) || (dx == 2 && dy == 1);
     }
 

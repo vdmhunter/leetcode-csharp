@@ -9,7 +9,7 @@ public class Solution
             .Select(directoryInfo => directoryInfo.Split(' '))
             .SelectMany(directoryInfo => directoryInfo
                 .Skip(1)
-                .Select(file => (path: directoryInfo[0], data: file.Split(new[] {'(', ')'},
+                .Select(file => (path: directoryInfo[0], data: file.Split(new[] { '(', ')' },
                     StringSplitOptions.RemoveEmptyEntries))))
             .GroupBy(fileInfo => fileInfo.data[1], fileInfo => $"{fileInfo.path}/{fileInfo.data[0]}")
             .Where(g => g.Count() > 1)

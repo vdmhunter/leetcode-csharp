@@ -6,7 +6,7 @@ public class Solution
     {
         var seen = new HashSet<int>();
         int mi = int.MaxValue, mx = int.MinValue, n = arr.Length;
-        
+
         foreach (var a in arr)
         {
             mi = Math.Min(mi, a);
@@ -15,17 +15,17 @@ public class Solution
         }
 
         var diff = mx - mi;
-        
+
         if (diff % (n - 1) != 0)
             return false;
-        
+
         diff /= n - 1;
-        
+
         while (--n > 0)
         {
             if (!seen.Contains(mi))
                 return false;
-            
+
             mi += diff;
         }
 

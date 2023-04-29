@@ -11,7 +11,7 @@ public class Solution
             if (s[i] != 'a')
             {
                 s[i] = 'a';
-                
+
                 return new string(s);
             }
 

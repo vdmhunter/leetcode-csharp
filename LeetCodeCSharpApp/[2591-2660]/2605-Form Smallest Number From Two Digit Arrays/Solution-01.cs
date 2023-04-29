@@ -13,7 +13,7 @@ public class Solution
         switch (common.Count)
         {
             case 0:
-                if(min1 < min2)
+                if (min1 < min2)
                     return min1 * 10 + min2;
                 return min2 * 10 + min1;
             default:

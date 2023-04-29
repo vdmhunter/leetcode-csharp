@@ -14,7 +14,7 @@ public class Solution
 
             if (i != current)
                 continue;
-            
+
             current = farthest;
             jump++;
         }

@@ -8,7 +8,7 @@ public class DataStream
     private int _countOfValue;
     private readonly int _value;
     private readonly int _k;
-    
+
     public DataStream(int value, int k)
     {
         _count = 0;
@@ -16,18 +16,18 @@ public class DataStream
         _value = value;
         _k = k;
     }
-    
+
     public bool Consec(int num)
     {
         _count++;
-        
+
         if (num == _value)
             _countOfValue++;
         else
             _countOfValue = 0;
-        
+
         if (_count < _k)
-             return false;
+            return false;
 
         return _countOfValue >= _k;
     }

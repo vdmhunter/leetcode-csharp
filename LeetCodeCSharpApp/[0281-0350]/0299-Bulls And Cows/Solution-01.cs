@@ -7,7 +7,7 @@ public class Solution
         var bulls = 0;
         var cows = 0;
         var numbers = new int[10];
-        
+
         for (var i = 0; i < secret.Length; i++)
             if (secret[i] == guess[i])
                 bulls++;

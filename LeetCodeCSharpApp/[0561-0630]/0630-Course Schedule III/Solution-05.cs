@@ -8,11 +8,11 @@ public class Solution
     public int ScheduleCourse(int[][] courses)
     {
         Array.Sort(courses, (a, b) => a[1] - b[1]);
-        
+
         var queue = new PriorityQueue<int, int>();
-        
+
         var time = 0;
-        
+
         foreach (var c in courses)
             if (time + c[0] <= c[1])
             {

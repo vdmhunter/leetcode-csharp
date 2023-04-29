@@ -17,7 +17,7 @@ public class Solution
     {
         return Helper(0, 0, preorder.Length - 1, preorder, inorder);
     }
-    
+
     private static TreeNode Helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder)
     {
         // exit case - null boundary check
@@ -26,9 +26,10 @@ public class Solution
 
         // create node
         var node = new TreeNode(preorder[preStart]); //first idx is root
-        
+
         // find idx for inorder
         var inRoot = 0; // inorder current index
+
         for (var i = inStart; i <= inEnd; i++)
             if (inorder[i] == node.val) // example: 'F'
                 inRoot = i;

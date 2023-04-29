@@ -6,7 +6,7 @@ public class Solution
     {
         var n = grades.Length;
         var x = (int)(Math.Sqrt(8 * n + 1) - 1) / 2;
-        
+
         return x;
     }
 }

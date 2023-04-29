@@ -5,12 +5,12 @@ public class Solution
     public string MinWindow(string s, string t)
     {
         var map = new int[128];
-        
+
         foreach (var c in t)
             map[c]++;
-        
+
         int counter = t.Length, begin = 0, end = 0, d = int.MaxValue, head = 0;
-        
+
         while (end < s.Length)
             end = End();
 

@@ -18,6 +18,7 @@ public class PascalsTriangleTests
     #region Test Case 001
 
     private readonly int _testcase001_numRows = 5;
+
     private readonly IList<IList<int>> _testcase001_output = new List<IList<int>>
     {
         new List<int> { 1 },
@@ -32,6 +33,7 @@ public class PascalsTriangleTests
     #region Test Case 001
 
     private readonly int _testcase002_numRows = 1;
+
     private readonly IList<IList<int>> _testcase002_output = new List<IList<int>>
     {
         new List<int> { 1 }

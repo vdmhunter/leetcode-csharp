@@ -13,7 +13,7 @@ public class Solution
         {
             if (last < r[0])
                 result = result * 2 % Mod;
-            
+
             last = Math.Max(last, r[1]);
         }
 

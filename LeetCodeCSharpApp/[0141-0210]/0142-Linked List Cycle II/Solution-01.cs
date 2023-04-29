@@ -9,8 +9,6 @@ public class Solution
         var slow = head;
         var fast = head;
 
-        //while (fast != null && fast.next != null)
-        //while (fast is { next: { } })
         while (fast?.next != null)
         {
             fast = fast.next.next;
@@ -18,9 +16,9 @@ public class Solution
 
             if (fast != slow)
                 continue;
-            
+
             var slow2 = head;
-            
+
             while (slow2 != slow)
             {
                 slow = slow.next;

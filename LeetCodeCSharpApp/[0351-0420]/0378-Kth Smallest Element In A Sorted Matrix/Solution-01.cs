@@ -8,7 +8,7 @@ public class Solution
         var n = matrix.Length;
         // smallest element
         heap.Add((matrix[0][0], 0, 0));
-        
+
         while (k > 1)
         {
             var min = heap.Min;
@@ -16,11 +16,11 @@ public class Solution
 
             //Next position to explore
             var dirs = new[] { new[] { 0, 1 }, new[] { 1, 0 } };
-            
+
             foreach (var dir in dirs)
             {
                 int nextRow = min.row + dir[0], nextCol = min.col + dir[1];
-                
+
                 if (nextRow < n && nextCol < n)
                     heap.Add((matrix[nextRow][nextCol], nextRow, nextCol));
             }

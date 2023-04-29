@@ -17,7 +17,7 @@ public class Solution
 
             if (currNode == null)
                 continue;
-            
+
             result.Add(currNode.val);
             stack.Push(currNode.right);
             stack.Push(currNode.left);

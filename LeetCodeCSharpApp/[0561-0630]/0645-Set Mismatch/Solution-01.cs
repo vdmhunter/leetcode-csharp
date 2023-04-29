@@ -11,7 +11,7 @@ public class Solution
         {
             if (freq[n] == 1)
                 result[0] = n;
-            
+
             freq[n]++;
         }
 

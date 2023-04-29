@@ -9,7 +9,7 @@ public class Solution
     public IList<IList<int>> PathSum(TreeNode root, int targetSum)
     {
         Search(root, targetSum, 0, new List<int>());
-        
+
         return _result;
     }
 

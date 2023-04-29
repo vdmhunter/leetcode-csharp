@@ -34,7 +34,7 @@ public class Solution
                 //we update the ans, and continue to search the largest window
                 if (ps == target)
                     minStep = Math.Min(minStep, nums.Length - (r - l + 1));
-                
+
                 ps -= nums[l];
                 l++;
             }

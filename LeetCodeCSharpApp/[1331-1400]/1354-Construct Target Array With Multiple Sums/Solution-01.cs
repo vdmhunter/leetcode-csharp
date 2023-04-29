@@ -9,7 +9,7 @@ public class Solution
     {
         var pq = new PriorityQueue<int, int>();
         var total = 0L;
-        
+
         foreach (var a in target)
         {
             total += a;

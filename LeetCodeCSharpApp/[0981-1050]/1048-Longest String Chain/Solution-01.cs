@@ -5,7 +5,7 @@ public class Solution
     public int LongestStrChain(string[] words)
     {
         Array.Sort(words, (x, y) => x.Length.CompareTo(y.Length));
-        
+
         var wordsLength = words.Distinct().ToDictionary(word => word, _ => 1);
 
         var max = 0;

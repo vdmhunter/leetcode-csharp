@@ -12,7 +12,7 @@ public class Solution
 
         var x = new string(arr1);
         var y = new string(arr2);
-        
+
         return y.Equals(x);
     }
 }

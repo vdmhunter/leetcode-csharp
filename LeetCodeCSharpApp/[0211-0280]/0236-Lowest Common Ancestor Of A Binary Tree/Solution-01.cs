@@ -36,7 +36,7 @@ public class Solution
 
         // If the current node is one of p or q
         var mid = currentNode == p || currentNode == q ? 1 : 0;
-        
+
         // If any two of the flags left, right or mid become True
         if (mid + left + right >= 2)
             _result = currentNode;

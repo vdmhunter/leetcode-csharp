@@ -5,7 +5,7 @@ public class Solution
     public int FindTheLongestBalancedSubstring(string s)
     {
         int c0 = 0, c1 = 0, result = 0;
-        
+
         foreach (var c in s)
         {
             if (c == '0')

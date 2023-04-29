@@ -27,7 +27,7 @@ public class Solution
         {
             while (upper.Count >= 2 && Cross(upper[^2], upper[^1], trees[i]) < 0)
                 upper.RemoveAt(upper.Count - 1);
-            
+
             upper.Add(trees[i]);
         }
 

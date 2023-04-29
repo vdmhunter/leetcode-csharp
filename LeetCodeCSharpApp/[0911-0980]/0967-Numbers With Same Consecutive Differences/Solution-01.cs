@@ -19,18 +19,18 @@ public class Solution
     public int[] NumsSameConsecDiff(int n, int k)
     {
         var result = Enumerable.Range(1, 9).ToList();
-        
+
         for (var i = 2; i <= n; ++i)
         {
             var tmp = new List<int>();
-            
+
             foreach (var x in result)
             {
                 var y = x % 10;
-                
+
                 if (y + k < 10)
                     tmp.Add(x * 10 + y + k);
-                
+
                 if (k > 0 && y - k >= 0)
                     tmp.Add(x * 10 + y - k);
             }

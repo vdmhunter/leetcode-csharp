@@ -8,7 +8,7 @@ public class Solution
         {
             var charArray = s.ToCharArray();
             Array.Sort(charArray);
-            
+
             return new string(charArray);
         }
 

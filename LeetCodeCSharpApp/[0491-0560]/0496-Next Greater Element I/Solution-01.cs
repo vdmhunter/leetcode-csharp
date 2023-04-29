@@ -6,7 +6,7 @@ public class Solution
     {
         var map = new Dictionary<int, int>();
         var stack = new Stack<int>();
-        
+
         foreach (var num in nums2)
         {
             while (stack.Count != 0 && stack.Peek() < num)
@@ -16,7 +16,7 @@ public class Solution
 
         for (var i = 0; i < nums1.Length; i++)
             nums1[i] = map.ContainsKey(nums1[i]) ? map[nums1[i]] : -1;
-        
+
         return nums1;
     }
 }

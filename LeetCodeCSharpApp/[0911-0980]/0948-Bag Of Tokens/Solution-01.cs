@@ -5,9 +5,9 @@ public class Solution
     public int BagOfTokensScore(int[] tokens, int power)
     {
         Array.Sort(tokens);
-        
+
         int res = 0, points = 0, i = 0, j = tokens.Length - 1;
-        
+
         while (i <= j)
             if (power >= tokens[i])
             {
