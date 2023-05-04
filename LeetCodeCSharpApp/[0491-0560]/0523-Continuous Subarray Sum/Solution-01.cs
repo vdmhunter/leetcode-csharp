@@ -14,9 +14,9 @@ public class Solution
             if (k != 0)
                 runningSum %= k;
 
-            if (dictionary.ContainsKey(runningSum))
+            if (dictionary.TryGetValue(runningSum, out var value))
             {
-                if (i - dictionary[runningSum] > 1)
+                if (i - value > 1)
                     return true;
             }
             else
