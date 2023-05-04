@@ -5,7 +5,7 @@ namespace LeetCodeCSharpApp.OutOfBoundaryPaths02;
 /// </summary>
 public class Solution
 {
-    private const int M = 1000000007;
+    private const int Mod = 1_000_000_007;
 
     public int FindPaths(int m, int n, int maxMove, int startRow, int startColumn)
     {
@@ -19,7 +19,7 @@ public class Solution
         return FindPaths(m, n, maxMove, startRow, startColumn, memo);
     }
 
-    private int FindPaths(int m, int n, int maxMove, int startRow, int startColumn, int[,,] memo)
+    private static int FindPaths(int m, int n, int maxMove, int startRow, int startColumn, int[,,] memo)
     {
         if (startRow == m || startColumn == n || startRow < 0 || startColumn < 0)
             return 1;
@@ -33,10 +33,10 @@ public class Solution
         memo[startRow, startColumn, maxMove] =
         (
             (FindPaths(m, n, maxMove - 1, startRow - 1, startColumn, memo) +
-             FindPaths(m, n, maxMove - 1, startRow + 1, startColumn, memo)) % M +
+             FindPaths(m, n, maxMove - 1, startRow + 1, startColumn, memo)) % Mod +
             (FindPaths(m, n, maxMove - 1, startRow, startColumn - 1, memo) +
-             FindPaths(m, n, maxMove - 1, startRow, startColumn + 1, memo)) % M
-        ) % M;
+             FindPaths(m, n, maxMove - 1, startRow, startColumn + 1, memo)) % Mod
+        ) % Mod;
 
         return memo[startRow, startColumn, maxMove];
     }
