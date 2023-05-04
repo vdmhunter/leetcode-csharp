@@ -9,14 +9,14 @@ public class Solution
         if (r * c != n * m)
             return mat;
 
-        var res = new int[r][];
+        var result = new int[r][];
 
         for (var i = 0; i < r; i++)
-            res[i] = new int[c];
+            result[i] = new int[c];
 
         for (var i = 0; i < r * c; i++)
-            res[i / c][i % c] = mat[i / m][i % m];
+            result[i / c][i % c] = mat[i / m][i % m];
 
-        return res;
+        return result;
     }
 }
