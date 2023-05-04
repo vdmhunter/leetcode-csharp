@@ -11,7 +11,7 @@ public class Solution
             if (nums[i] <= nums[i + 1])
                 continue;
 
-            if (check || (i > 0 && i < nums.Length - 2 && nums[i + 2] < nums[i] && nums[i - 1] > nums[i + 1]))
+            if (check || i > 0 && i < nums.Length - 2 && nums[i + 2] < nums[i] && nums[i - 1] > nums[i + 1])
                 return false;
 
             check = true;
