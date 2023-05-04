@@ -11,11 +11,12 @@ public class Solution
         {
             while (stack.Count != 0 && stack.Peek() < num)
                 map.Add(stack.Pop(), num);
+
             stack.Push(num);
         }
 
         for (var i = 0; i < nums1.Length; i++)
-            nums1[i] = map.ContainsKey(nums1[i]) ? map[nums1[i]] : -1;
+            nums1[i] = map.TryGetValue(nums1[i], out var value) ? value : -1;
 
         return nums1;
     }
