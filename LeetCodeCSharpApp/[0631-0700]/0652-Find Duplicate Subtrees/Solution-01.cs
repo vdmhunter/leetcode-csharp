@@ -23,8 +23,7 @@ public class Solution
         var triplet = string.Format("{0},{1},{2}", Traverse(node.left, tripletToId, counts, result), node.val,
             Traverse(node.right, tripletToId, counts, result));
 
-        if (!tripletToId.ContainsKey(triplet))
-            tripletToId.Add(triplet, tripletToId.Count + 1);
+        tripletToId.TryAdd(triplet, tripletToId.Count + 1);
 
         var id = tripletToId[triplet];
 
