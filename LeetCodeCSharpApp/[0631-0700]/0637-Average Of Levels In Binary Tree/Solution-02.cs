@@ -7,8 +7,8 @@ namespace LeetCodeCSharpApp.AverageOfLevelsInBinaryTree02;
 /// </summary>
 public class Solution
 {
-    private IList<int>? _levelCount;
-    private IList<long>? _levelSum;
+    private IList<int> _levelCount = null!;
+    private IList<long> _levelSum = null!;
 
     public IList<double> AverageOfLevels(TreeNode root)
     {
@@ -25,15 +25,15 @@ public class Solution
         if (root == null)
             return;
 
-        if (_levelCount!.Count < level)
+        if (_levelCount.Count < level)
         {
             _levelCount.Add(1);
-            _levelSum!.Add(root.val);
+            _levelSum.Add(root.val);
         }
         else
         {
             _levelCount[level - 1]++;
-            _levelSum![level - 1] += root.val;
+            _levelSum[level - 1] += root.val;
         }
 
         Dfs(root.left, level + 1);
