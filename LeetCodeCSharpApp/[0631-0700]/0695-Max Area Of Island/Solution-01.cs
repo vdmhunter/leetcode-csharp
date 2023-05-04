@@ -5,28 +5,29 @@ namespace LeetCodeCSharpApp.MaxAreaOfIsland01;
 /// </summary>
 public class Solution
 {
-    private int[][]? _grid;
-    private bool[][]? _seen;
+    private int[][] _grid = null!;
+    private bool[][] _seen = null!;
 
     public int MaxAreaOfIsland(int[][] grid)
     {
         _grid = grid;
         _seen = new bool[grid.Length][];
+
         for (var i = 0; i < grid.Length; i++)
             _seen[i] = new bool[grid[0].Length];
 
-        var ans = 0;
+        var result = 0;
 
         for (var r = 0; r < grid.Length; r++)
             for (var c = 0; c < grid[0].Length; c++)
-                ans = Math.Max(ans, Area(r, c));
+                result = Math.Max(result, Area(r, c));
 
-        return ans;
+        return result;
     }
 
     private int Area(int r, int c)
     {
-        if (r < 0 || r >= _grid!.Length || c < 0 || c >= _grid[0].Length || _seen![r][c] || _grid[r][c] == 0)
+        if (r < 0 || r >= _grid.Length || c < 0 || c >= _grid[0].Length || _seen[r][c] || _grid[r][c] == 0)
             return 0;
 
         _seen[r][c] = true;
