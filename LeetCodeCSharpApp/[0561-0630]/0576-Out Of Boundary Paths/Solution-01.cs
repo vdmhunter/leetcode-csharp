@@ -13,9 +13,9 @@ public class Solution
         if (maxMove == 0)
             return 0;
 
-        return FindPaths(m, n, maxMove - 1, startRow - 1, startColumn)
-               + FindPaths(m, n, maxMove - 1, startRow + 1, startColumn)
-               + FindPaths(m, n, maxMove - 1, startRow, startColumn - 1)
-               + FindPaths(m, n, maxMove - 1, startRow, startColumn + 1);
+        return FindPaths(m, n, maxMove - 1, startRow - 1, startColumn) +
+               FindPaths(m, n, maxMove - 1, startRow + 1, startColumn) +
+               FindPaths(m, n, maxMove - 1, startRow, startColumn - 1) +
+               FindPaths(m, n, maxMove - 1, startRow, startColumn + 1);
     }
 }
