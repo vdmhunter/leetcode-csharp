@@ -1,10 +1,11 @@
+// ReSharper disable CoVariantArrayConversion
+
 namespace LeetCodeCSharpApp.FindDuplicateFileInSystem01;
 
 public class Solution
 {
     public IList<IList<string>> FindDuplicate(string[] paths)
     {
-        // ReSharper disable once CoVariantArrayConversion
         return paths
             .Select(directoryInfo => directoryInfo.Split(' '))
             .SelectMany(directoryInfo => directoryInfo
