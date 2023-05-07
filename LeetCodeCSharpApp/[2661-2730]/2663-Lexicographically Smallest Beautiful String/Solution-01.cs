@@ -8,21 +8,12 @@ public class Solution
 
         for (var i = s.Length - 1; i >= 0; i--)
         {
-            arr[i]++;
-
-            while (!Valid(arr, i))
-                arr[i]++;
+            IncrementChar(arr, i);
 
             if (arr[i] >= 'a' + k)
                 continue;
 
-            for (i += 1; i < s.Length; i++)
-            {
-                arr[i] = 'a';
-
-                while (!Valid(arr, i))
-                    arr[i]++;
-            }
+            SetRemainingChars(arr, i, s.Length);
 
             return new string(arr);
         }
@@ -30,8 +21,31 @@ public class Solution
         return "";
     }
 
+    private static void IncrementChar(char[] arr, int i)
+    {
+        arr[i]++;
+
+        while (!Valid(arr, i))
+            arr[i]++;
+    }
+
+    private static void SetRemainingChars(char[] arr, int i, int length)
+    {
+        for (i += 1; i < length; i++)
+        {
+            arr[i] = 'a';
+            var count = 0;
+
+            while (!Valid(arr, i) && count < 3)
+            {
+                arr[i]++;
+                count++;
+            }
+        }
+    }
+
     private static bool Valid(char[] arr, int i)
     {
-        return (i < 1 || arr[i] != arr[i - 1]) && (i < 2 || arr[i] != arr[i - 2]);
+        return i < 1 || arr[i] != arr[i - 1] && (i < 2 || arr[i] != arr[i - 2]);
     }
 }
