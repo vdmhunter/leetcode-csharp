@@ -4,32 +4,22 @@ public class Solution
 {
     public int LongestSemiRepetitiveSubstring(string s)
     {
-        var start = 0;
-        var end = 1;
-        var maxLen = 0;
-        var count = 0;
-        var pos = 0;
+        int result = 1, i = 0, j = 1, last = 0;
 
-        while (end < s.Length)
+        while (j < s.Length)
         {
-            if (s[end] == s[end - 1])
-                if (count == 1)
-                {
-                    maxLen = Math.Max(maxLen, end - start);
-                    start = pos;
-                    pos = end;
-                }
-                else
-                {
-                    pos = end;
-                    count++;
-                }
+            if (s[j] == s[j - 1])
+            {
+                if (last != 0)
+                    i = last;
 
-            end++;
+                last = j;
+            }
+
+            result = Math.Max(result, j - i + 1);
+            j++;
         }
 
-        maxLen = Math.Max(maxLen, end - start);
-
-        return maxLen;
+        return result;
     }
 }
