@@ -7,21 +7,21 @@ public class Solution
         var n = nums1.Count;
 
         var p = Enumerable.Range(0, n)
-            .Select(i => (nums2[i], nums1[i]))
-            .OrderBy(t => t.Item1)
+            .Select(i => (n1: nums1[i], n2: nums2[i]))
+            .OrderBy(t => t.n2)
             .ToList();
 
         var dp = new int[n + 1];
 
-        foreach (var (a, b) in p)
+        foreach (var (n1, n2) in p)
             for (var i = n - 1; i >= 0; i--)
-                dp[i + 1] = Math.Max(dp[i + 1], dp[i] + (i + 1) * a + b);
+                dp[i + 1] = Math.Max(dp[i + 1], dp[i] + (i + 1) * n2 + n1);
 
-        var n1Sum = nums1.Sum();
-        var n2Sum = nums2.Sum();
+        var s1 = nums1.Sum();
+        var s2 = nums2.Sum();
 
         for (var i = 0; i <= n; i++)
-            if (n2Sum * i + n1Sum - dp[i] <= x)
+            if (s2 * i + s1 - dp[i] <= x)
                 return i;
 
         return -1;
