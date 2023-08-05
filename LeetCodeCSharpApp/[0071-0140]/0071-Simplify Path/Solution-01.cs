@@ -9,11 +9,9 @@ public class Solution
         foreach (var e in path.Split('/'))
             if (stack.Count > 0 && e == "..")
                 stack.Pop();
-            else if (e != "." && e != "" && e != "..")
+            else if (e is not ("." or "" or ".."))
                 stack.Push(e);
 
-        var result = string.Join('/', stack.Reverse());
-
-        return "/" + result;
+        return $"/{string.Join('/', stack.Reverse())}";
     }
 }
