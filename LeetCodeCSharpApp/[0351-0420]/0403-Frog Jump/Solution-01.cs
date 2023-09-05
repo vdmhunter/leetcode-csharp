@@ -2,41 +2,32 @@ namespace LeetCodeCSharpApp.FrogJump01;
 
 public class Solution
 {
+    private bool[,] _dp = null!;
+
     public bool CanCross(int[] stones)
     {
-        if (stones == null || stones.Length == 0)
+        _dp = new bool[stones.Length, stones.Length];
+
+        return Cross(stones, 0, 0);
+    }
+
+    private bool Cross(int[] stones, int k, int index)
+    {
+        if (_dp[index, k])
             return false;
 
-        var n = stones.Length;
-        var stepsAtStone = InitializeStepsAtStone(stones);
+        if (index == stones.Length - 1)
+            return true;
 
-        foreach (var stone in stones)
-        {
-            var possibleStepsFromStone = stepsAtStone[stone];
-            UpdatePossibleSteps(stepsAtStone, stone, possibleStepsFromStone);
-        }
+        var i = index;
 
-        return stepsAtStone[stones[n - 1]].Count > 0;
-    }
+        while (++i < stones.Length && stones[i] - stones[index] - k < 2)
+            if (stones[i] - stones[index] - k > -2)
+                if (Cross(stones, stones[i] - stones[index], i))
+                    return true;
 
-    private static Dictionary<int, HashSet<int>> InitializeStepsAtStone(int[] stones)
-    {
-        var stepsAtStone = new Dictionary<int, HashSet<int>>();
+        _dp[index, k] = true;
 
-        foreach (var stone in stones)
-            stepsAtStone[stone] = new HashSet<int>();
-
-        stepsAtStone[0].Add(0);
-
-        return stepsAtStone;
-    }
-
-    private static void UpdatePossibleSteps(Dictionary<int, HashSet<int>> stepsAtStone, int stone,
-        HashSet<int> possibleStepsFromStone)
-    {
-        foreach (var step in possibleStepsFromStone)
-            for (var adjustedStep = step - 1; adjustedStep <= step + 1; adjustedStep++)
-                if (adjustedStep > 0 && stepsAtStone.ContainsKey(stone + adjustedStep))
-                    stepsAtStone[stone + adjustedStep].Add(adjustedStep);
+        return false;
     }
 }
