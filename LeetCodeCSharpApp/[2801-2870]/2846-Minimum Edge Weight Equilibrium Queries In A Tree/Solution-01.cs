@@ -29,7 +29,9 @@ public class Solution
 
         for (var i = 0; i < queries.Length; i++)
         {
-            int x = queries[i][0], y = queries[i][1], l = Lca(x, y, fa, d);
+            var x = queries[i][0];
+            var y = queries[i][1];
+            var l = Lca(x, y, fa, d);
             var length = d[x] + d[y] - 2 * d[l];
             var maxZ = 0;
 
