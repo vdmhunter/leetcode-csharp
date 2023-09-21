@@ -1,3 +1,5 @@
+// ReSharper disable IdentifierTypo
+
 namespace LeetCodeCSharpApp.CountOfInterestingSubarrays01;
 
 public class Solution
