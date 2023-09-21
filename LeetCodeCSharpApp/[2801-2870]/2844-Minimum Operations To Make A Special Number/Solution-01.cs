@@ -6,13 +6,13 @@ public class Solution
     {
         var n = num.Length;
 
-        var lastZeroIndex = num.LastIndexOf('0');
-        var lastFiveIndex = num.LastIndexOf('5');
+        var idxZ = num.LastIndexOf('0');
+        var idx5 = num.LastIndexOf('5');
 
-        var operationsFromZero = lastZeroIndex >= 0 ? Math.Min(n - 1, Check(num, lastZeroIndex)) : n;
-        var operationsFromFive = Check(num, lastFiveIndex);
+        var opZ = idxZ >= 0 ? Math.Min(n - 1, Check(num, idxZ)) : n;
+        var op5 = Check(num, idx5);
 
-        return Math.Min(operationsFromZero, operationsFromFive);
+        return Math.Min(opZ, op5);
     }
 
     private static int Check(string num, int i)
