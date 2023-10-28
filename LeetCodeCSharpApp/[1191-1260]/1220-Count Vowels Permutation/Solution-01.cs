@@ -2,7 +2,7 @@ namespace LeetCodeCSharpApp.CountVowelsPermutation01;
 
 public class Solution
 {
-    private const ulong Mod = 1000000007;
+    private const int Mod = 1_000_000_007;
 
     public int CountVowelPermutation(int n)
     {
