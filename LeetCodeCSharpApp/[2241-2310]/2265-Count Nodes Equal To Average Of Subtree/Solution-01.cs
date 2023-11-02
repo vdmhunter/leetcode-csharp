@@ -12,7 +12,7 @@ public class Solution
         return result;
     }
 
-    private (int, int) Traverse(TreeNode node, ref int result)
+    private static (int, int) Traverse(TreeNode node, ref int result)
     {
         if (node == null!)
             return (0, 0);
