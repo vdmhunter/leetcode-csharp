@@ -4,9 +4,10 @@ public class Solution
 {
     public int CountPalindromicSubsequence(string s)
     {
+        var result = 0;
+
         var first = new int[26];
         var last = new int[26];
-        var result = 0;
 
         Array.Fill(first, int.MaxValue);
 
@@ -18,9 +19,7 @@ public class Solution
 
         for (var i = 0; i < 26; ++i)
             if (first[i] < last[i])
-                result += s.Substring(first[i] + 1, last[i] - first[i] - 1)
-                    .Distinct()
-                    .Count();
+                result += s.Substring(first[i] + 1, last[i] - first[i] - 1).Distinct().Count();
 
         return result;
     }
