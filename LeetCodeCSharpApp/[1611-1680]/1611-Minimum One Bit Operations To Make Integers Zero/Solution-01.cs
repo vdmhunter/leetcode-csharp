@@ -8,13 +8,8 @@ public class Solution
 
         while (n != 0)
         {
-            var b = 1;
-
-            while (b << 1 <= n)
-                b <<= 1;
-
-            n = (b >> 1) ^ b ^ n;
-            result += b;
+            result ^= n;
+            n >>= 1;
         }
 
         return result;
