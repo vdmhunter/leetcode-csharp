@@ -1,30 +1,26 @@
+// ReSharper disable InconsistentNaming
+
+using System.Text;
 using LeetCodeCSharpApp.Common;
 
 namespace LeetCodeCSharpApp.ConstructStringFromBinaryTree01;
 
 public class Solution
 {
-    // ReSharper disable once InconsistentNaming
     public string Tree2str(TreeNode root)
     {
-        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
         if (root == null)
             return "";
 
-        var result = root.val + "";
+        var result = new StringBuilder();
+        result.Append(root.val);
 
-        var left = Tree2str(root.left);
-        var right = Tree2str(root.right);
+        if (root.left != null || root.right != null)
+            result.Append("(" + Tree2str(root.left!) + ")");
 
-        if (left == "" && right == "")
-            return result;
+        if (root.right != null)
+            result.Append("(" + Tree2str(root.right) + ")");
 
-        if (left == "")
-            return result + "()" + "(" + right + ")";
-
-        if (right == "")
-            return result + "(" + left + ")";
-
-        return result + "(" + left + ")" + "(" + right + ")";
+        return result.ToString();
     }
 }
