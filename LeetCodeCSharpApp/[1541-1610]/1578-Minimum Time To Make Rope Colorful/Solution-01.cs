@@ -4,17 +4,14 @@ public class Solution
 {
     public int MinCost(string colors, int[] neededTime)
     {
-        int result = 0, max = neededTime[0];
-
-        for (var i = 0; i < colors.Length - 1; i++)
-            if (colors[i] == colors[i + 1])
+        return Enumerable.Range(1, colors.Length - 1)
+            .Where(i => colors[i] == colors[i - 1])
+            .Sum(i =>
             {
-                result += Math.Min(max, neededTime[i + 1]);
-                max = Math.Max(max, neededTime[i + 1]);
-            }
-            else
-                max = neededTime[i + 1];
+                var minTime = Math.Min(neededTime[i], neededTime[i - 1]);
+                neededTime[i] = Math.Max(neededTime[i], neededTime[i - 1]);
 
-        return result;
+                return minTime;
+            });
     }
 }
