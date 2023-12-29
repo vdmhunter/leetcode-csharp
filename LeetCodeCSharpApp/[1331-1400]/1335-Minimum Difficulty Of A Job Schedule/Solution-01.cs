@@ -12,13 +12,13 @@ public class Solution
 
         for (var days = 1; days <= d; days++)
             for (var i = 0; i < jobDifficulty.Length - days + 1; i++)
-                UpdateDP(i, days);
+                UpdateDp(i, days);
 
         return dp[d, 0] < int.MaxValue ? dp[d, 0] : -1;
 
         #region UpdateDP
 
-        void UpdateDP(int i, int days)
+        void UpdateDp(int i, int days)
         {
             var difficult = 0;
 
