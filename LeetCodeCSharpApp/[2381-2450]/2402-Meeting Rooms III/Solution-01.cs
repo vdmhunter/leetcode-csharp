@@ -31,21 +31,28 @@ public class Solution
             else
             {
                 arr[busy.Peek().RoomNumber]++;
+
                 var room = new Room
                 {
                     RoomNumber = busy.Peek().RoomNumber, EndTime = end + busy.Dequeue().EndTime - start
                 };
+
                 busy.Enqueue(room, room);
             }
         }
 
-        var res = 0;
+        return FindMostBookedRoomIndex(arr);
+    }
+
+    private static int FindMostBookedRoomIndex(int[] arr)
+    {
+        var result = 0;
 
         for (var i = 0; i < arr.Length; i++)
-            if (arr[i] > arr[res])
-                res = i;
+            if (arr[i] > arr[result])
+                result = i;
 
-        return res;
+        return result;
     }
 
     private class Room
