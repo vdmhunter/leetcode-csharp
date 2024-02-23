@@ -1,5 +1,11 @@
 namespace LeetCodeCSharpApp.CheapestFlightsWithinKStops01;
 
+/// <summary>
+/// Bellman Ford
+///
+/// Time complexity: O((n + e) * k)
+/// Space complexity: O(n)
+/// </summary>
 public class Solution
 {
     public int FindCheapestPrice(int n, int[][] flights, int src, int dst, int k)
