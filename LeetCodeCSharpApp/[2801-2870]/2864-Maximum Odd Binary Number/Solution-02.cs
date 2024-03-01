@@ -15,16 +15,6 @@ public class Solution
         int n = s.Length;
         int onesCnt = s.Sum(c => c - '0');
 
-        var sb = new StringBuilder();
-
-        for (var i = 0; i < onesCnt - 1; i++)
-            sb.Append('1');
-
-        for (var i = 0; i < n - onesCnt; i++)
-            sb.Append('0');
-
-        sb.Append('1');
-
-        return sb.ToString();
+        return new string('1', onesCnt - 1) + new string('0', n - onesCnt) + new string('1', 1);
     }
 }
