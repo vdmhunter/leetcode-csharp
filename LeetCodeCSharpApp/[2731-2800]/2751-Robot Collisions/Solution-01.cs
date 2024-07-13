@@ -1,20 +1,17 @@
-// ReSharper disable SuggestVarOrType_SimpleTypes
-// ReSharper disable SuggestVarOrType_Elsewhere
-
 namespace LeetCodeCSharpApp.RobotCollisions01;
 
 public class Solution
 {
     public IList<int> SurvivedRobotsHealths(int[] positions, int[] healths, string directions)
     {
-        var robots = positions
+        List<Robot> robots = positions
             .Select((p, i) => new Robot(p, healths[i], directions[i], i))
             .OrderBy(r => r.Position)
             .ToList();
 
         var stack = new Stack<Robot>();
 
-        foreach (var robot in robots)
+        foreach (Robot robot in robots)
         {
             if (robot.Direction == 'R' || stack.Count == 0 || stack.Peek().Direction == 'L')
                 stack.Push(robot);
@@ -29,7 +26,7 @@ public class Solution
     {
         while (stack.Count > 0 && stack.Peek().Direction == 'R')
         {
-            var lastRobot = stack.Pop();
+            Robot lastRobot = stack.Pop();
 
             if (currentRobot.Health > lastRobot.Health)
             {
